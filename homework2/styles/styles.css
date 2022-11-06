@@ -169,7 +169,7 @@ body {
 .book-card .favorites-div {
     position: absolute;
     left: 50%;
-    top: -20px;
+    top: -22.5px;
     transform: translate(-50%, 0);
 
     background-color: #e0f2f1;

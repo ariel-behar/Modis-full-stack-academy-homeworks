@@ -77,7 +77,7 @@ function createBook(book) {
     favoritesDiv.classList.add('favorites-div')
 
     let favoritesParagraph = document.createElement('p')
-    favoritesParagraph.textContent = 'Add to favorites'
+    favoritesParagraph.textContent = 'Add to Favorites'
 
     let starSpan = document.createElement('span')
     starSpan.textContent = 'star'
