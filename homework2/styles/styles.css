@@ -21,6 +21,8 @@ body {
 }
 
 #main-section {
+
+    
     min-height: 30vh;
     height: 100vh;
 
@@ -40,6 +42,9 @@ body {
     align-items: center;
 
     transition: height 1s;
+
+        /* ! TO BE REMOVED */
+        display: none;
 }
 
 #main-section .mask{
@@ -103,21 +108,21 @@ body {
 
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-
-    opacity: 0;
+    gap: 50px;
+   /* ! TO BE Change to opacity 0 */
+    opacity: 1;
     transition: opacity 1s ease-in-out 0.7s;
 
 }
 
 .book-card {
     flex-basis: calc(33% - 30px);
-    border: 1px solid black;
     background-color: #e0f2f1;
     padding: 10px;
     box-shadow: 3px 3px 10px #b2dfdb;
     border: 1px solid #b2dfdb;
     min-height: 40vh;
+    position: relative;
 
     display: flex;
     justify-content: space-between;
@@ -161,7 +166,41 @@ body {
     padding: 10px;
 }
 
+.book-card .favorites-div {
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translate(-50%, 0);
 
+    background-color: #e0f2f1;
+    padding: 0 30px;
+    box-shadow: 3px 3px 10px #b2dfdb;
+    border: 1px solid #b2dfdb;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.book-card .favorites-div p, .book-card .favorites-div span{
+    color: #0039cb;
+}
+
+.book-card .favorites-div p:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.book-card .favorites-div span.material-symbols-outlined {
+    margin-left: 5px;
+    font-size: 2rem;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 800,
+        'GRAD' 200,
+        'opsz' 48
+}
+
+/* Media queries */
 @media (max-width: 1400px) { 
     #main-section h1 {
         font-size: 4rem;
