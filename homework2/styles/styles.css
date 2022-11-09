@@ -146,12 +146,14 @@ body {
     box-shadow: 3px 3px 10px #b2dfdb;
     border: 1px solid #b2dfdb;
     min-height: 40vh;
+    max-height: 550px;
     position: relative;
 
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+
 }
 
 .book-card:hover {
@@ -184,7 +186,7 @@ body {
 }
 
 .book-card .book-description {
-    height: auto;
+    height: 100%;
     align-self: flex-end;
     font-size: 1.6rem;
     padding: 10px;

@@ -15,7 +15,15 @@ searchForm.addEventListener('submit', (e) =>{
     
         searchServices.searchBooks(processedSearchTerm)
             .then(res => res.json())
-            .then(data => displaySearchResults(data))
+            .then(data => {
+                displaySearchResults(data)
+                document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
+                    paragraph.addEventListener('click', (e) =>{
+                        addRemovetoFromFavorites(e.currentTarget)
+                    })
+                });
+                
+            })
             .catch(err => console.log(err))
     }
 })
@@ -62,7 +70,6 @@ function displaySearchResults(results) {
     
     for (const book of results.items) {
         createBook(book)
-        
         toggleSearchResultsSection(true)
     }
 }
@@ -70,13 +77,14 @@ function displaySearchResults(results) {
 function createBook(book) {
     let bookCardArticle = document.createElement('article');
     bookCardArticle.classList.add('book-card')
+    bookCardArticle.setAttribute('data-google-book-id', book.id)
     bookCardArticle.innerHTML = `<header class="book-heading">
             <h3 class="book-title">${book.volumeInfo.title}</h3>
-            <h4 class="book-author">by ${book.volumeInfo.authors ? `by ${book.volumeInfo.authors.join(' & ')}` : 'author uknown'}</h4>
+            <h4 class="book-author">by <span>${book.volumeInfo.authors ? `${book.volumeInfo.authors.join(' & ')}` : 'author uknown'}</span></h4>
         </header><img class="book-image" src="${book.volumeInfo.imageLinks.thumbnail}">
-        <p class="book-description">${generateDescription()}</p>
+        // <p class="book-description">${generateDescription()}</p>
         <div class="favorites-div">
-            <p>Add to Favorites<span class="material-symbols-outlined">star</span></p>
+            <p class="add-remove-to-from-favorites-par">Add to Favorites<span class="material-symbols-outlined">star</span></p>
         </div>`;
 
 
@@ -103,6 +111,24 @@ shrinkSectionButton.addEventListener('click', () =>{
     toggleSearchResultsSection(false)
 })
 
+function addRemovetoFromFavorites(currentTarget){
+    // Need to continue from here
+    let googleBookId = currentTarget.parentElement.parentElement.getAttribute('data-google-book-id');
+    
+    let bookTitle = currentTarget.parentElement.parentElement.children[0].children[0].textContent
+    let bookAuthor = currentTarget.parentElement.parentElement.children[0].children[1].children[0].textContent
+    let bookImage = currentTarget.parentElement.parentElement.children[1].getAttribute('src')
+    
+    let bookIbookDescription = currentTarget.parentElement.parentElement.children[2].textContent
+    
+    console.log('googleBookId:', googleBookId)
+    console.log('bookTitle:', bookTitle)
+    console.log('bookAuthor:', bookAuthor)
+    console.log('bookImage:', bookImage)
+    console.log('bookIbookDescription:', bookIbookDescription)
+
+}
+
     
     // let bookHeader = document.createElement('header')
     // bookHeader.classList.add('book-heading')
@@ -122,12 +148,17 @@ shrinkSectionButton.addEventListener('click', () =>{
     // let bookDescription = document.createElement('p')
     // bookDescription.classList.add('book-description')
 
+ 
+
     // let favoritesDiv = document.createElement('div')
     // favoritesDiv.classList.add('favorites-div')
     // favoritesDiv.innerHTML =``
 
     // let favoritesParagraph = document.createElement('p')
     // favoritesParagraph.textContent = 'Add to Favorites'
+    // favoritesParagraph.addEventListener('click', (e) =>{
+    //     addRemovetoFromFavorites(e.currentTarget)
+    // })
 
     // let starSpan = document.createElement('span')
     // starSpan.textContent = 'star'
