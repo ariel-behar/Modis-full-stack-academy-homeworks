@@ -3,6 +3,8 @@ import request from '/utilities/request.js'
 let mainSection = document.getElementById('main-section')
 let searchForm = document.querySelector('.search-form')
 let searchResultsSection = document.getElementById('search-results-section')
+let shrinkSectionButton = document.querySelector('.shrink-section-button')
+let mainSectionHeading = document.querySelector('#main-section h1');
 
 searchForm.addEventListener('submit', (e) =>{
     e.preventDefault();
@@ -24,20 +26,45 @@ function clearSearchResultsSection() {
     }
 }
 
+function toggleSearchResultsSection(toggle){
+    if(toggle) {
+        searchResultsSection.style.opacity = "1";
+
+        mainSection.style.height = '30vh';
+        document.getElementById('search-term').value = '';
+    
+        mainSectionHeading.style.display = 'none'
+        shrinkSectionButton.style.display = 'block'
+        
+        setTimeout(() => {
+            shrinkSectionButton.style.opacity = "1";
+        }, 500);
+    } else {
+        searchResultsSection.style.opacity = "0";
+
+        mainSection.style.height = '100vh';
+        document.getElementById('search-term').value = '';
+    
+        mainSectionHeading.style.display = 'block'
+
+        clearSearchResultsSection();
+
+        shrinkSectionButton.style.opacity = "0";
+
+        setTimeout(() => {
+            shrinkSectionButton.style.display = 'none'
+        }, 1000);
+    }
+}
+
 function displaySearchResults(results) {
     clearSearchResultsSection()
     
     for (const book of results.items) {
         createBook(book)
         
-        searchResultsSection.style.opacity = "1";
-
-        mainSection.style.height = '30vh';
-        document.getElementById('search-term').value = '';
-
-        document.querySelector('#main-section h1').style.display = 'none'
+        toggleSearchResultsSection(true)
     }
-
 }
 
 function createBook(book) {
@@ -64,14 +91,17 @@ function createBook(book) {
             } else {
                 return book.volumeInfo.description
             }
+        } else {
+            return ''
         }
     }
-
 
     searchResultsSection.appendChild(bookCardArticle)
 }
 
-
+shrinkSectionButton.addEventListener('click', () =>{
+    toggleSearchResultsSection(false)
+})
 
     
     // let bookHeader = document.createElement('header')
