@@ -1,4 +1,4 @@
-import request from '/utilities/request.js'
+import * as searchServices from './services/searchServices.js'
 
 let mainSection = document.getElementById('main-section')
 let searchForm = document.querySelector('.search-form')
@@ -13,7 +13,7 @@ searchForm.addEventListener('submit', (e) =>{
     if(searchTerm.length > 0) {
         let processedSearchTerm = searchTerm.split(' ').join('+')
     
-        request(processedSearchTerm)
+        searchServices.searchBooks(processedSearchTerm)
             .then(res => res.json())
             .then(data => displaySearchResults(data))
             .catch(err => console.log(err))
