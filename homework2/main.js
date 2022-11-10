@@ -3,6 +3,7 @@ import * as searchServices from './services/searchServices.js'
 let mainSection = document.getElementById('main-section')
 let searchForm = document.querySelector('.search-form')
 let searchResultsSection = document.getElementById('search-results-section')
+let searchResultsDiv = document.querySelector('#search-results-section .search-results')
 let shrinkSectionButton = document.querySelector('.shrink-section-button')
 let mainSectionHeading = document.querySelector('#main-section h1');
 
@@ -16,7 +17,7 @@ searchForm.addEventListener('submit', (e) =>{
         searchServices.searchBooks(processedSearchTerm)
             .then(res => res.json())
             .then(data => {
-                displaySearchResults(data)
+                displaySearchResults(data, searchTerm)
                 document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
                     paragraph.addEventListener('click', (e) =>{
                         addRemovetoFromFavorites(e.currentTarget)
@@ -29,8 +30,8 @@ searchForm.addEventListener('submit', (e) =>{
 })
 
 function clearSearchResultsSection() {
-    while(searchResultsSection.firstChild){
-        searchResultsSection.removeChild(searchResultsSection.lastChild)
+    while(searchResultsDiv.firstChild){
+        searchResultsDiv.removeChild(searchResultsDiv.lastChild)
     }
 }
 
@@ -65,13 +66,15 @@ function toggleSearchResultsSection(toggle){
     }
 }
 
-function displaySearchResults(results) {
+function displaySearchResults(results, searchTerm) {
     clearSearchResultsSection()
-    
+
     for (const book of results.items) {
         createBook(book)
         toggleSearchResultsSection(true)
     }
+
+    document.querySelector('#search-results-section .search-results-heading span').textContent = searchTerm;
 }
 
 function createBook(book) {
@@ -82,29 +85,29 @@ function createBook(book) {
             <h3 class="book-title">${book.volumeInfo.title}</h3>
             <h4 class="book-author">by <span>${book.volumeInfo.authors ? `${book.volumeInfo.authors.join(' & ')}` : 'author uknown'}</span></h4>
         </header><img class="book-image" src="${book.volumeInfo.imageLinks.thumbnail}">
-        // <p class="book-description">${generateDescription()}</p>
+        <p class="book-description">${book.volumeInfo.description ? book.volumeInfo.description : ''}</p>
         <div class="favorites-div">
             <p class="add-remove-to-from-favorites-par">Add to Favorites<span class="material-symbols-outlined">star</span></p>
         </div>`;
 
 
-    function generateDescription(){
-        if(book.volumeInfo.description) {
-            if(book.volumeInfo.description.length >= 300) {
-                let truncatedDescription = book.volumeInfo.description.slice(0,300)
+    // function generateDescription(){
+    //     if(book.volumeInfo.description) {
+    //         if(book.volumeInfo.description.length >= 300) {
+    //             let truncatedDescription = book.volumeInfo.description.slice(0,300)
     
-                truncatedDescription = truncatedDescription.split(' ')
-                truncatedDescription.push('...')
-                return truncatedDescription.join(' ')
-            } else {
-                return book.volumeInfo.description
-            }
-        } else {
-            return ''
-        }
-    }
+    //             truncatedDescription = truncatedDescription.split(' ')
+    //             truncatedDescription.push('...')
+    //             return truncatedDescription.join(' ')
+    //         } else {
+    //             return book.volumeInfo.description
+    //         }
+    //     } else {
+    //         return ''
+    //     }
+    // }
 
-    searchResultsSection.appendChild(bookCardArticle)
+    searchResultsDiv.appendChild(bookCardArticle)
 }
 
 shrinkSectionButton.addEventListener('click', () =>{
