@@ -1,4 +1,6 @@
 import * as searchServices from './services/searchServices.js'
+import * as favoritesServices from './services/favoritesServices.js'
+import FavoriteBook from './model/FavoriteBook.js'
 
 let mainSection = document.getElementById('main-section')
 let searchForm = document.querySelector('.search-form')
@@ -123,13 +125,14 @@ function addRemovetoFromFavorites(currentTarget){
     let bookImage = currentTarget.parentElement.parentElement.children[1].getAttribute('src')
     
     let bookIbookDescription = currentTarget.parentElement.parentElement.children[2].textContent
-    
-    console.log('googleBookId:', googleBookId)
-    console.log('bookTitle:', bookTitle)
-    console.log('bookAuthor:', bookAuthor)
-    console.log('bookImage:', bookImage)
-    console.log('bookIbookDescription:', bookIbookDescription)
 
+    let favoriteBook = new FavoriteBook(googleBookId, bookTitle, bookAuthor, bookImage, bookIbookDescription)
+    console.log('favoriteBook:', favoriteBook)
+    
+    favoritesServices.add(favoriteBook)
+        .then(res => res.json())
+        .then(data=> console.log(data))
+        .catch(err => console.log(err))
 }
 
     
