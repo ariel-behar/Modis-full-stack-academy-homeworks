@@ -1,6 +1,7 @@
 import * as searchServices from './services/searchServices.js'
 import * as favoritesServices from './services/favoritesServices.js'
 import FavoriteBook from './model/FavoriteBook.js'
+import createBook from './scripts/createBook.js'
 
 let mainSection = document.getElementById('main-section')
 let searchForm = document.querySelector('.search-form')
@@ -20,6 +21,7 @@ searchForm.addEventListener('submit', (e) =>{
             .then(res => res.json())
             .then(data => {
                 displaySearchResults(data, searchTerm)
+                
                 document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
                     paragraph.addEventListener('click', (e) =>{
                         addRemovetoFromFavorites(e.currentTarget)
@@ -68,48 +70,15 @@ function toggleSearchResultsSection(toggle){
     }
 }
 
-function displaySearchResults(results, searchTerm) {
+async function displaySearchResults(results, searchTerm) {
     clearSearchResultsSection()
 
     for (const book of results.items) {
-        createBook(book)
+        searchResultsDiv.appendChild(await createBook(book))
         toggleSearchResultsSection(true)
     }
 
     document.querySelector('#search-results-section .search-results-heading span').textContent = searchTerm;
-}
-
-function createBook(book) {
-    let bookCardArticle = document.createElement('article');
-    bookCardArticle.classList.add('book-card')
-    bookCardArticle.setAttribute('data-google-book-id', book.id)
-    bookCardArticle.innerHTML = `<header class="book-heading">
-            <h3 class="book-title">${book.volumeInfo.title}</h3>
-            <h4 class="book-author">by <span>${book.volumeInfo.authors ? `${book.volumeInfo.authors.join(' & ')}` : 'author uknown'}</span></h4>
-        </header><img class="book-image" src="${book.volumeInfo.imageLinks.thumbnail}">
-        <p class="book-description">${book.volumeInfo.description ? book.volumeInfo.description : ''}</p>
-        <div class="favorites-div">
-            <p class="add-remove-to-from-favorites-par">Add to Favorites<span class="material-symbols-outlined">star</span></p>
-        </div>`;
-
-
-    // function generateDescription(){
-    //     if(book.volumeInfo.description) {
-    //         if(book.volumeInfo.description.length >= 300) {
-    //             let truncatedDescription = book.volumeInfo.description.slice(0,300)
-    
-    //             truncatedDescription = truncatedDescription.split(' ')
-    //             truncatedDescription.push('...')
-    //             return truncatedDescription.join(' ')
-    //         } else {
-    //             return book.volumeInfo.description
-    //         }
-    //     } else {
-    //         return ''
-    //     }
-    // }
-
-    searchResultsDiv.appendChild(bookCardArticle)
 }
 
 shrinkSectionButton.addEventListener('click', () =>{
@@ -117,17 +86,15 @@ shrinkSectionButton.addEventListener('click', () =>{
 })
 
 function addRemovetoFromFavorites(currentTarget){
-    // Need to continue from here
     let googleBookId = currentTarget.parentElement.parentElement.getAttribute('data-google-book-id');
-    
+
+    isFavoriteBook(googleBookId, currentTarget)
+
     let bookTitle = currentTarget.parentElement.parentElement.children[0].children[0].textContent
     let bookAuthor = currentTarget.parentElement.parentElement.children[0].children[1].children[0].textContent
     let bookImage = currentTarget.parentElement.parentElement.children[1].getAttribute('src')
-    
     let bookIbookDescription = currentTarget.parentElement.parentElement.children[2].textContent
-
     let favoriteBook = new FavoriteBook(googleBookId, bookTitle, bookAuthor, bookImage, bookIbookDescription)
-    console.log('favoriteBook:', favoriteBook)
     
     favoritesServices.add(favoriteBook)
         .then(res => res.json())
@@ -135,7 +102,9 @@ function addRemovetoFromFavorites(currentTarget){
         .catch(err => console.log(err))
 }
 
-    
+
+
+
     // let bookHeader = document.createElement('header')
     // bookHeader.classList.add('book-heading')
 
@@ -175,7 +144,7 @@ function addRemovetoFromFavorites(currentTarget){
 
     // bookHeader.appendChild(bookTitle)
     // bookHeader.appendChild(bookAuthor)
-    // bookCardArticle.appendChild(bookHeader)
-    // bookCardArticle.appendChild(bookImage)
-    // bookCardArticle.appendChild(bookDescription)
-    // bookCardArticle.appendChild(favoritesDiv)
+    // bookCard.appendChild(bookHeader)
+    // bookCard.appendChild(bookImage)
+    // bookCard.appendChild(bookDescription)
+    // bookCard.appendChild(favoritesDiv)
