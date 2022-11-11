@@ -1,0 +1,125 @@
+#search-results-section {
+    margin-top: 30vh;
+    width: 100%;
+    padding: 50px;
+
+   /* ! TO BE Change to opacity 0 */
+    opacity: 0;
+    transition: opacity 1s ease-in-out 0.7s;
+
+}
+
+#search-results-section .search-results-heading {
+    margin-bottom: 50px;
+}
+
+#search-results-section .search-results-heading span {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#search-results-section .search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.book-card {
+    flex-basis: calc(33% - 30px);
+    background-color: var(--green-background-color);
+    padding: 10px;
+    box-shadow: 3px 3px 10px var(--green-box-shadow-color);
+    border: 1px solid var(--green-box-shadow-color);
+    min-height: 40vh;
+    max-height: auto;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.book-card:hover {
+    box-shadow: 7px 7px 10px var(--green-box-shadow-color);
+}
+
+.book-card .book-heading {
+    padding: 15px;
+    flex-basis: 50%;
+    align-self: flex-start;
+}
+
+.book-card .book-heading .book-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.book-card .book-heading .book-author {
+    font-size: 1.7rem;
+    font-style: italic;
+}
+
+.book-card .book-image {
+    margin: 10px;
+    margin-left: auto;
+    min-height: auto;
+    align-self: flex-start;
+
+    height: 300px;
+}
+
+.book-card .book-description {
+    height: 100%;
+    max-height: 300px;
+
+    font-size: 1.6rem;
+    padding: 10px;
+
+    align-self: flex-start;
+
+    overflow-y: scroll;
+}
+
+.book-card .favorites-div {
+    position: absolute;
+    left: 50%;
+    top: -22.5px;
+    transform: translate(-50%, 0);
+
+    background-color: var(--green-background-color);
+    padding: 0 30px;
+    box-shadow: 3px 3px 10px var(--green-box-shadow-color);
+    border: 1px solid var(--green-box-shadow-color);
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.book-card .favorites-div p, .book-card .favorites-div span{
+    color: #0039cb;
+}
+
+.book-card .favorites-div p:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.book-card .favorites-div span.material-symbols-outlined {
+    margin-left: 5px;
+    font-size: 2rem;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 800,
+        'GRAD' 200,
+        'opsz' 48
+}
+
+.book-card .favorites-div span.material-symbols-outlined.filled-star {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 800,
+        'GRAD' 200,
+        'opsz' 48
+}
