@@ -4,12 +4,19 @@ export default function request(url, method = 'GET', body){
         return fetch(url)
     }
 
-    return fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body)
-    })
-    
+    if(['POST', 'PUT', 'PATCH'].includes(method)) {
+        return fetch(url, {
+            method,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body)
+        })
+    }   
+
+    if(method = 'DELETE') {
+        return fetch(url, {
+            method: 'DELETE',
+        })
+    }
 }

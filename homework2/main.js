@@ -1,7 +1,7 @@
 import * as searchServices from './services/searchServices.js'
-import * as favoritesServices from './services/favoritesServices.js'
-import FavoriteBook from './model/FavoriteBook.js'
 import createBook from './scripts/createBook.js'
+import addRemovetoFromFavorites from './scripts/addRemovetoFromFavorites.js'
+import { isFavoriteBook } from './scripts/isFavoriteBook.js'
 
 let mainSection = document.getElementById('main-section')
 let searchForm = document.querySelector('.search-form')
@@ -13,21 +13,24 @@ let mainSectionHeading = document.querySelector('#main-section h1');
 searchForm.addEventListener('submit', (e) =>{
     e.preventDefault();
 
+    
+
     let searchTerm = new FormData(e.currentTarget).get('searchTerm')
     if(searchTerm.length > 0) {
         let processedSearchTerm = searchTerm.split(' ').join('+')
     
         searchServices.searchBooks(processedSearchTerm)
             .then(res => res.json())
-            .then(data => {
-                displaySearchResults(data, searchTerm)
-                
-                document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
-                    paragraph.addEventListener('click', (e) =>{
-                        addRemovetoFromFavorites(e.currentTarget)
+            .then( data => {
+                clearSearchResultsSection();
+                displaySearchResults(data.items, searchTerm)
+                    .then(() => {
+                        document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
+                            paragraph.addEventListener('click', (e) =>{
+                                addRemovetoFromFavorites(e.currentTarget)
+                            })
+                        });
                     })
-                });
-                
             })
             .catch(err => console.log(err))
     }
@@ -70,10 +73,10 @@ function toggleSearchResultsSection(toggle){
     }
 }
 
-async function displaySearchResults(results, searchTerm) {
+async function displaySearchResults(books, searchTerm) {
     clearSearchResultsSection()
 
-    for (const book of results.items) {
+    for (const book of books) {
         searchResultsDiv.appendChild(await createBook(book))
         toggleSearchResultsSection(true)
     }
@@ -85,22 +88,7 @@ shrinkSectionButton.addEventListener('click', () =>{
     toggleSearchResultsSection(false)
 })
 
-function addRemovetoFromFavorites(currentTarget){
-    let googleBookId = currentTarget.parentElement.parentElement.getAttribute('data-google-book-id');
 
-    isFavoriteBook(googleBookId, currentTarget)
-
-    let bookTitle = currentTarget.parentElement.parentElement.children[0].children[0].textContent
-    let bookAuthor = currentTarget.parentElement.parentElement.children[0].children[1].children[0].textContent
-    let bookImage = currentTarget.parentElement.parentElement.children[1].getAttribute('src')
-    let bookIbookDescription = currentTarget.parentElement.parentElement.children[2].textContent
-    let favoriteBook = new FavoriteBook(googleBookId, bookTitle, bookAuthor, bookImage, bookIbookDescription)
-    
-    favoritesServices.add(favoriteBook)
-        .then(res => res.json())
-        .then(data=> console.log(data))
-        .catch(err => console.log(err))
-}
 
 
 

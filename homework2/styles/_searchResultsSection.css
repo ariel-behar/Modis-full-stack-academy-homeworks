@@ -97,14 +97,20 @@
     cursor: pointer;
 }
 
-.book-card .favorites-div p, .book-card .favorites-div span{
-    color: #0039cb;
-}
-
 .book-card .favorites-div p:hover{
     transform: scale(1.05);
     transition: transform 0.2s ease-in-out;
 }
+
+
+.book-card .favorites-div span.add-to-favorites{
+    color: var(--green-success-color);
+}
+
+.book-card .favorites-div span.remove-from-favorites{
+    color: var(--red-danger-color);
+}
+
 
 .book-card .favorites-div span.material-symbols-outlined {
     margin-left: 5px;
