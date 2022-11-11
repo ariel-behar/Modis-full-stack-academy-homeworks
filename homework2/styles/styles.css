@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
 
+:root {
+    --green-success-color: #81c784;
+    --red-danger-color: #e57373;
+
+    --green-border-color: #e57373;
+    --green-submit-color: #00897b;
+    --green-box-shadow-color: #b2dfdb;
+    --green-background-color: #e0f2f1;
+}
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -31,7 +42,7 @@ body {
     background-position: center;
     
     padding: 30px;
-    box-shadow: 0px 11px 20px #b2dfdb;
+    box-shadow: 0px 11px 20px var(--green-box-shadow-color);
     position:fixed;
     z-index: 1000;
 
@@ -105,7 +116,7 @@ body {
     flex-grow: 1;
     padding: 0 15px;
     border-radius: 10px;
-    border: 1px solid #005b4f;
+    border: 1px solid var(--green-border-color);
     font-size: 1.5rem;
 }
 
@@ -118,8 +129,8 @@ body {
     border-radius: 10px;
     font-weight: bold;
 
-    background-color: #00897b;
-    border: 1px solid #005b4f;
+    background-color: var(--green-submit-color);
+    border: 1px solid var(--green-border-color);
     color: #001c18;
 }
 
@@ -153,10 +164,10 @@ body {
 
 .book-card {
     flex-basis: calc(33% - 30px);
-    background-color: #e0f2f1;
+    background-color: var(--green-background-color);
     padding: 10px;
-    box-shadow: 3px 3px 10px #b2dfdb;
-    border: 1px solid #b2dfdb;
+    box-shadow: 3px 3px 10px var(--green-box-shadow-color);
+    border: 1px solid var(--green-box-shadow-color);
     min-height: 40vh;
     max-height: auto;
     position: relative;
@@ -169,7 +180,7 @@ body {
 }
 
 .book-card:hover {
-    box-shadow: 7px 7px 10px #b2dfdb;
+    box-shadow: 7px 7px 10px var(--green-box-shadow-color);
 }
 
 .book-card .book-heading {
@@ -215,10 +226,10 @@ body {
     top: -22.5px;
     transform: translate(-50%, 0);
 
-    background-color: #e0f2f1;
+    background-color: var(--green-background-color);
     padding: 0 30px;
-    box-shadow: 3px 3px 10px #b2dfdb;
-    border: 1px solid #b2dfdb;
+    box-shadow: 3px 3px 10px var(--green-box-shadow-color);
+    border: 1px solid var(--green-box-shadow-color);
     font-size: 1.8rem;
     font-weight: bold;
     cursor: pointer;
@@ -238,6 +249,14 @@ body {
     font-size: 2rem;
     font-variation-settings:
         'FILL' 0,
+        'wght' 800,
+        'GRAD' 200,
+        'opsz' 48
+}
+
+.book-card .favorites-div span.material-symbols-outlined.filled-star {
+    font-variation-settings:
+        'FILL' 1,
         'wght' 800,
         'GRAD' 200,
         'opsz' 48
