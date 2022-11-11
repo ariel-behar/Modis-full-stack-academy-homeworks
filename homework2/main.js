@@ -1,7 +1,9 @@
-import * as searchServices from './services/searchServices.js'
+import * as googleBooksServices from './services/googleBooksServices.js'
+import * as favoriteServices from './services/favoritesServices.js'
+
 import createBook from './scripts/createBook.js'
 import addRemovetoFromFavorites from './scripts/addRemovetoFromFavorites.js'
-import { isFavoriteBook } from './scripts/isFavoriteBook.js'
+
 
 let mainSection = document.getElementById('main-section')
 let searchForm = document.querySelector('.search-form')
@@ -10,23 +12,43 @@ let searchResultsDiv = document.querySelector('#search-results-section .search-r
 let shrinkSectionButton = document.querySelector('.shrink-section-button')
 let mainSectionHeading = document.querySelector('#main-section h1');
 
-searchForm.addEventListener('submit', (e) =>{
+searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
-    
-
+    let submitBtnName = e.submitter.name;
     let searchTerm = new FormData(e.currentTarget).get('searchTerm')
-    if(searchTerm.length > 0) {
-        let processedSearchTerm = searchTerm.split(' ').join('+')
-    
-        searchServices.searchBooks(processedSearchTerm)
+    let processedSearchTerm = searchTerm.split(' ').join('+')
+
+    if (submitBtnName == 'google') {
+        if (searchTerm.length > 0) {
+            googleBooksServices.search(processedSearchTerm)
+                .then(res => res.json())
+                .then(data => {
+                    clearSearchResultsSection();
+
+                    displaySearchResults(data.items, searchTerm)
+                        .then(() => {
+                            document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
+                                paragraph.addEventListener('click', (e) => {
+                                    addRemovetoFromFavorites(e.currentTarget)
+                                })
+                            });
+                        })
+                })
+                .catch(err => console.log(err))
+        }
+    } else if (submitBtnName == 'favorites') {
+        favoriteServices.search(processedSearchTerm)
             .then(res => res.json())
-            .then( data => {
+            .then(data => {
+                console.log('data:', data)
                 clearSearchResultsSection();
-                displaySearchResults(data.items, searchTerm)
+
+                // YOU HAVE TO CONTINUE FROM HERE AND modify the searchQuert in request
+
+                displaySearchResults(data, searchTerm)
                     .then(() => {
                         document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
-                            paragraph.addEventListener('click', (e) =>{
+                            paragraph.addEventListener('click', (e) => {
                                 addRemovetoFromFavorites(e.currentTarget)
                             })
                         });
@@ -37,21 +59,21 @@ searchForm.addEventListener('submit', (e) =>{
 })
 
 function clearSearchResultsSection() {
-    while(searchResultsDiv.firstChild){
+    while (searchResultsDiv.firstChild) {
         searchResultsDiv.removeChild(searchResultsDiv.lastChild)
     }
 }
 
-function toggleSearchResultsSection(toggle){
-    if(toggle) {
+function toggleSearchResultsSection(toggle) {
+    if (toggle) {
         searchResultsSection.style.opacity = "1";
 
         mainSection.style.height = '30vh';
         document.getElementById('search-term').value = '';
-    
+
         mainSectionHeading.style.display = 'none'
         shrinkSectionButton.style.display = 'block'
-        
+
         setTimeout(() => {
             shrinkSectionButton.style.opacity = "1";
         }, 500);
@@ -60,7 +82,7 @@ function toggleSearchResultsSection(toggle){
 
         mainSection.style.height = '100vh';
         document.getElementById('search-term').value = '';
-    
+
         mainSectionHeading.style.display = 'block'
 
         clearSearchResultsSection();
@@ -77,62 +99,14 @@ async function displaySearchResults(books, searchTerm) {
     clearSearchResultsSection()
 
     for (const book of books) {
-        searchResultsDiv.appendChild(await createBook(book))
+        searchResultsDiv.appendChild(await createBook(book.volumeInfo ? book.volumeInfo : book))
         toggleSearchResultsSection(true)
     }
 
     document.querySelector('#search-results-section .search-results-heading span').textContent = searchTerm;
 }
 
-shrinkSectionButton.addEventListener('click', () =>{
+shrinkSectionButton.addEventListener('click', () => {
     toggleSearchResultsSection(false)
 })
 
-
-
-
-
-
-    // let bookHeader = document.createElement('header')
-    // bookHeader.classList.add('book-heading')
-
-    // let bookTitle = document.createElement('h3')
-    // bookTitle.classList.add('book-title')
-    // bookTitle.textContent = book.volumeInfo.title
-
-    // let bookAuthor = document.createElement('h4')
-    // bookAuthor.classList.add('book-author')
-    // bookAuthor.textContent = book.volumeInfo.authors ? `by ${book.volumeInfo.authors.join(' & ')}` : 'author uknown'
-
-    // let bookImage = document.createElement('img')
-    // bookImage.classList.add('book-image')
-    // bookImage.src = book.volumeInfo.imageLinks.thumbnail
-
-    // let bookDescription = document.createElement('p')
-    // bookDescription.classList.add('book-description')
-
- 
-
-    // let favoritesDiv = document.createElement('div')
-    // favoritesDiv.classList.add('favorites-div')
-    // favoritesDiv.innerHTML =``
-
-    // let favoritesParagraph = document.createElement('p')
-    // favoritesParagraph.textContent = 'Add to Favorites'
-    // favoritesParagraph.addEventListener('click', (e) =>{
-    //     addRemovetoFromFavorites(e.currentTarget)
-    // })
-
-    // let starSpan = document.createElement('span')
-    // starSpan.textContent = 'star'
-    // starSpan.classList.add('material-symbols-outlined')
-
-    // favoritesParagraph.appendChild(starSpan)
-    // favoritesDiv.appendChild(favoritesParagraph)
-
-    // bookHeader.appendChild(bookTitle)
-    // bookHeader.appendChild(bookAuthor)
-    // bookCard.appendChild(bookHeader)
-    // bookCard.appendChild(bookImage)
-    // bookCard.appendChild(bookDescription)
-    // bookCard.appendChild(favoritesDiv)

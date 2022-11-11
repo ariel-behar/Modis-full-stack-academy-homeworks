@@ -15,10 +15,10 @@ export default async function createBook(book) {
         bookCard.setAttribute('data-is-favorite', favoriteBookId ? 'yes' : 'no')
 
         bookCard.innerHTML = `<header class="book-heading">
-                <h3 class="book-title">${book.volumeInfo.title}</h3>
-                <h4 class="book-author">by <span>${book.volumeInfo.authors ? `${book.volumeInfo.authors.join(' & ')}` : 'author unknown'}</span></h4>
-            </header><img class="book-image" src="${book.volumeInfo.imageLinks.thumbnail}">
-            <p class="book-description">${book.volumeInfo.description ? book.volumeInfo.description : ''}</p>
+                <h3 class="book-title">${book.title}</h3>
+                <h4 class="book-author">by <span>${book.authors ? `${book.authors.join(' & ')}` : 'author unknown'}</span></h4>
+            </header><img class="book-image" src="${ book.imageLinks?.thumbnail ? book.imageLinks.thumbnail : book.imageUrl}">
+            <p class="book-description">${book.description ? book.description : ''}</p>
             <div class="favorites-div">
                 <p class="add-remove-to-from-favorites-par">${ addRemoveHTMLString } </p>
             </div>`;
