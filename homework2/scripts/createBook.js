@@ -1,7 +1,6 @@
 import { isFavoriteBook } from "./isFavoriteBook.js";
 
 export default async function createBook(book, googleBookId) {
-
     let isFavoriteResponse = await isFavoriteBook(googleBookId);
     
     let favoriteBookId = await isFavoriteResponse.bookId ? isFavoriteResponse.bookId : undefined;

@@ -1,9 +1,8 @@
 import * as googleBooksServices from './services/googleBooksServices.js'
-import * as favoriteServices from './services/favoritesServices.js'
+import * as favoritesServices from './services/favoritesServices.js'
 
 import createBook from './scripts/createBook.js'
 import addRemovetoFromFavorites from './scripts/addRemovetoFromFavorites.js'
-
 
 let mainSection = document.getElementById('main-section')
 let searchForm = document.querySelector('.search-form')
@@ -11,10 +10,11 @@ let searchResultsSection = document.getElementById('search-results-section')
 let searchResultsDiv = document.querySelector('#search-results-section .search-results')
 let shrinkSectionButton = document.querySelector('.shrink-section-button')
 let mainSectionHeading = document.querySelector('#main-section h1');
+let showFavoritesBtn = document.querySelector('#main-section .show-favorites-button')
 
 searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     let searchTerm = new FormData(e.currentTarget).get('searchTerm')
     let processedSearchTerm = searchTerm.split(' ').join('+')
 
@@ -35,6 +35,30 @@ searchForm.addEventListener('submit', (e) => {
             })
             .catch(err => console.log(err))
     }
+})
+
+showFavoritesBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    favoritesServices.getAll()
+        .then(res => res.json())
+        .then(data => {
+            clearSearchResultsSection()
+
+            if(data.length > 0) {
+                displaySearchResults(data, 'Favorites')
+                    .then(() => {
+                        document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
+                            paragraph.addEventListener('click', (e) => {
+                                addRemovetoFromFavorites(e.currentTarget)
+                            })
+                        });
+                    })
+            } else {
+                displaySearchResults(false, 'Favorites')
+            }
+        })
+        .catch(err => console.log(err))
 
 })
 
@@ -78,12 +102,27 @@ function toggleSearchResultsSection(toggle) {
 async function displaySearchResults(books, searchTerm) {
     clearSearchResultsSection()
 
-    for (const book of books) {
-        searchResultsDiv.appendChild(await createBook(book.volumeInfo ? book.volumeInfo : book, book.id))
+    document.querySelector('#search-results-section .search-results-heading span').textContent = searchTerm;
+
+    if(books) {
+        if(searchTerm == 'Favorites') {
+            for (const book of books) {
+                searchResultsDiv.appendChild(await createBook(book, book.googleBookId, true))
+            }
+        } else {
+            for (const book of books) {
+                searchResultsDiv.appendChild(await createBook(book.volumeInfo ? book.volumeInfo : book, book.id))
+            }
+        }
+        toggleSearchResultsSection(true)
+        
+    } else {
+        searchResultsDiv.innerHTML = `<h3>You have not added any favorites books... Yet :)</h3>`
         toggleSearchResultsSection(true)
     }
 
-    document.querySelector('#search-results-section .search-results-heading span').textContent = searchTerm;
+    
+
 }
 
 shrinkSectionButton.addEventListener('click', () => {
