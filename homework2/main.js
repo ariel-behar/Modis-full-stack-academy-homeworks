@@ -57,7 +57,6 @@ showFavoritesBtn.addEventListener('click', (e) => {
             }
         })
         .catch(err => console.log(err))
-
 })
 
 shrinkSectionBtn.addEventListener('click', () => {

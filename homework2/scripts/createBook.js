@@ -1,5 +1,4 @@
 import generateComments from "./generateComments.js";
-import hasComments from "./hasComments.js";
 import { isFavoriteBook } from "./isFavoriteBook.js";
 
 export default async function createBook(book, googleBookId) {
@@ -28,7 +27,10 @@ export default async function createBook(book, googleBookId) {
             <img class="book-image" src="${ book.imageLinks?.thumbnail ? book.imageLinks.thumbnail : book.imageUrl}">
             <p class="book-description">${book.description ? book.description : ''}</p>
             <div class="book-comments-section"> 
-                <h3 class="book-comments-section-title">Comments</h3>
+                <header>
+                    <h3 class="book-comments-section-title">Comments</h3>
+                    <button name="add-comment" value="add-comment">Add Comment</button>
+                </header>
                 <div class="book-comments">
                     ${ commentsResult }
                 </div>
