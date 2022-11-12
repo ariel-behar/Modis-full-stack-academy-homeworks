@@ -99,15 +99,30 @@
     font-size: 1.5rem;
 }
 
-.search-form button[value="searchFavorites"] span {
-    color: white;
+.search-form .search-submit-buttons-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-form .search-submit-buttons-div button {
+    cursor: pointer;
+}
+
+.search-form .search-submit-buttons-div button:hover {
+    box-shadow: 3px 3px 10px var(--green-submit-color);
+    transform: scale(1.02);
+}
+
+
+.search-form button[value="searchFavorites"] {
+    margin-top: 5px;
 }
 
 .search-form button[type="submit"] {
     min-width: 100px;
-    min-height: 30px;
-    font-size: 2rem;
-    padding: 10px 50px;
+    min-height: 25px;
+    font-size: 1.6rem;
+    padding: 2px 30px;
     border-radius: 10px;
     font-weight: bold;
 

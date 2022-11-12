@@ -18,7 +18,7 @@ export function isFavoriteBook(googleBookId, currentTarget = undefined){
 
 export function generateResponseString(bookObj, currentTarget){
     let addString = `<span class="add-to-favorites"> ADD to Favorites </span> <span class="material-symbols-outlined add-to-favorites">star</span>`
-    let removeString = `<span class="remove-from-favorites"> REMOVE from Favorites <span class="material-symbols-outlined filled-star remove-from-favorites">star</span>`
+    let removeString = `<span class="remove-from-favorites"> REMOVE from Favorites </span> <span class="material-symbols-outlined filled-star remove-from-favorites">star</span>`
 
     if(currentTarget) {
         if(bookObj) {

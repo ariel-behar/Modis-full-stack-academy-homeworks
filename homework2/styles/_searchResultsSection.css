@@ -88,8 +88,11 @@
     top: -22.5px;
     transform: translate(-50%, 0);
 
-    background-color: var(--green-background-color);
+    min-width: 60%;
+    text-align: center;
     padding: 0 30px;
+
+    background-color: var(--green-background-color);
     box-shadow: 3px 3px 10px var(--green-box-shadow-color);
     border: 1px solid var(--green-box-shadow-color);
     font-size: 1.8rem;

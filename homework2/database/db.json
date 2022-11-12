@@ -1,20 +1,5 @@
 {
   "favorite-books": [
-    {
-      "id": 1668181565217,
-      "googleBookId": "N2USBQAAQBAJ",
-      "title": "The ASD Workbook",
-      "author": "Penny Kershaw",
-      "imageUrl": "http://books.google.com/books/content?id=N2USBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "This workbook helps parents to explain ASDs to their child and provide practical and emotional support following diagnosis. It is presented in a clear and positive way. As the workbook is completed an invaluable record of development will be created for parent and child to look back on together."
-    },
-    {
-      "id": 1668181566622,
-      "googleBookId": "FQrlAAAAMAAJ",
-      "title": "AIAA 92-4519 - AIAA 92-4671",
-      "author": "author unknown",
-      "imageUrl": "http://books.google.com/books/content?id=FQrlAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "description": ""
-    }
+
   ]
 }
