@@ -23,6 +23,7 @@ export default async function addRemovetoFromFavorites(currentTarget){
         let bookAuthor = currentTarget.parentElement.parentElement.children[0].children[1].children[0].textContent
         let bookImage = currentTarget.parentElement.parentElement.children[1].getAttribute('src')
         let bookIbookDescription = currentTarget.parentElement.parentElement.children[2].textContent
+        
         let favoriteBook = new FavoriteBook(googleBookId, bookTitle, bookAuthor, bookImage, bookIbookDescription)
 
         return favoritesServices.add(favoriteBook)

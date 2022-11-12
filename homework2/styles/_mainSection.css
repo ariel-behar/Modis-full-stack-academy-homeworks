@@ -61,6 +61,22 @@
     text-shadow: var(--dark-text-shadow);
 }
 
+
+#main-section .show-favorites-button {
+    cursor: pointer;
+    color: white;
+
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    font-size: 1.5rem;
+}
+
+#main-section .show-favorites-button span {
+    color: white;
+}
+
 #main-section .mask{
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
@@ -99,30 +115,11 @@
     font-size: 1.5rem;
 }
 
-.search-form .search-submit-buttons-div {
-    display: flex;
-    flex-direction: column;
-}
-
-.search-form .search-submit-buttons-div button {
-    cursor: pointer;
-}
-
-.search-form .search-submit-buttons-div button:hover {
-    box-shadow: 3px 3px 10px var(--green-submit-color);
-    transform: scale(1.02);
-}
-
-
-.search-form button[value="searchFavorites"] {
-    margin-top: 5px;
-}
-
-.search-form button[type="submit"] {
+.search-form input[type="submit"] {
     min-width: 100px;
-    min-height: 25px;
-    font-size: 1.6rem;
-    padding: 2px 30px;
+    min-height: 30px;
+    font-size: 2rem;
+    padding: 10px 50px;
     border-radius: 10px;
     font-weight: bold;
 

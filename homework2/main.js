@@ -14,38 +14,17 @@ let mainSectionHeading = document.querySelector('#main-section h1');
 
 searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    let submitBtnName = e.submitter.name;
+    
     let searchTerm = new FormData(e.currentTarget).get('searchTerm')
     let processedSearchTerm = searchTerm.split(' ').join('+')
 
-    if (submitBtnName == 'google') {
-        if (searchTerm.length > 0) {
-            googleBooksServices.search(processedSearchTerm)
-                .then(res => res.json())
-                .then(data => {
-                    clearSearchResultsSection();
-
-                    displaySearchResults(data.items, searchTerm)
-                        .then(() => {
-                            document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
-                                paragraph.addEventListener('click', (e) => {
-                                    addRemovetoFromFavorites(e.currentTarget)
-                                })
-                            });
-                        })
-                })
-                .catch(err => console.log(err))
-        }
-    } else if (submitBtnName == 'favorites') {
-        favoriteServices.search(processedSearchTerm)
+    if (searchTerm.length > 0) {
+        googleBooksServices.search(processedSearchTerm)
             .then(res => res.json())
             .then(data => {
-                console.log('data:', data)
                 clearSearchResultsSection();
 
-                // YOU HAVE TO CONTINUE FROM HERE AND modify the searchQuert in request
-
-                displaySearchResults(data, searchTerm)
+                displaySearchResults(data.items, searchTerm)
                     .then(() => {
                         document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
                             paragraph.addEventListener('click', (e) => {
@@ -56,6 +35,7 @@ searchForm.addEventListener('submit', (e) => {
             })
             .catch(err => console.log(err))
     }
+
 })
 
 function clearSearchResultsSection() {
@@ -99,7 +79,7 @@ async function displaySearchResults(books, searchTerm) {
     clearSearchResultsSection()
 
     for (const book of books) {
-        searchResultsDiv.appendChild(await createBook(book.volumeInfo ? book.volumeInfo : book))
+        searchResultsDiv.appendChild(await createBook(book.volumeInfo ? book.volumeInfo : book, book.id))
         toggleSearchResultsSection(true)
     }
 

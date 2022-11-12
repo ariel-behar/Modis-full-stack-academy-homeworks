@@ -1,16 +1,15 @@
 import { isFavoriteBook } from "./isFavoriteBook.js";
 
-export default async function createBook(book) {
-    let googleBookId = book.id
+export default async function createBook(book, googleBookId) {
 
     let isFavoriteResponse = await isFavoriteBook(googleBookId);
     
-    let favoriteBookId = isFavoriteResponse ? undefined : isFavoriteResponse.bookId;
+    let favoriteBookId = await isFavoriteResponse.bookId ? isFavoriteResponse.bookId : undefined;
     let addRemoveHTMLString = isFavoriteResponse.htmlString;
     
     let bookCard = document.createElement('article');
         bookCard.classList.add('book-card')
-        bookCard.setAttribute('data-google-book-id', book.id)
+        bookCard.setAttribute('data-google-book-id', googleBookId)
         bookCard.setAttribute('data-book-id', favoriteBookId)
         bookCard.setAttribute('data-is-favorite', favoriteBookId ? 'yes' : 'no')
 
