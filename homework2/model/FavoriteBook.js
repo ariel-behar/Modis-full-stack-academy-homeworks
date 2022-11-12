@@ -6,5 +6,6 @@ export default class FavoriteBook {
         this.author = author;
         this.imageUrl = imageUrl;
         this.description = description;
+        this.comments = [];
     }
 }

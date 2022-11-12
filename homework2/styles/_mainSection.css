@@ -20,8 +20,8 @@
 
     transition: height 1s;
 
-        /* ! TO BE REMOVED */
-        /* display: none; */
+    /* ! TO BE REMOVED */
+    /* display: none; */
 }
 
 /* #main-section .favorites-button {
@@ -50,7 +50,7 @@
     top: 50px;
     left: 50px;
 
-    font-size: 50px;
+    font-size: 3.5rem;
 
     font-variation-settings:
     'FILL' 1,
@@ -70,7 +70,7 @@
     top: 50px;
     right: 50px;
 
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 #main-section .show-favorites-button span {
@@ -122,6 +122,7 @@
     padding: 10px 50px;
     border-radius: 10px;
     font-weight: bold;
+    cursor: pointer;
 
     background-color: var(--green-submit-color);
     border: 1px solid var(--green-border-color);

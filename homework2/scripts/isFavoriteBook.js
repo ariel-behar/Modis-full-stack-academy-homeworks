@@ -5,7 +5,7 @@ export function isFavoriteBook(googleBookId, currentTarget = undefined){
         .then(res => res.json())
         .then(data => {
             let bookObj = data.length == 0 ? null : data[0] ;
-            let bookId = bookObj == null ? null : bookObj.id
+            let bookId = bookObj == null ? null : bookObj.id;
             
             let htmlString = generateResponseString(bookObj, currentTarget); 
 
