@@ -1,12 +1,4 @@
 {
   "favorite-books": [],
-  "comments": [
-    {
-      "id": 1668369794848,
-      "bookId": "1668369691651",
-      "title": "a",
-      "content": "a",
-      "createdAt": "Sun Nov 13 2022 22:03:14 GMT+0200 (Eastern European Standard Time)"
-    }
-  ]
+  "comments": []
 }

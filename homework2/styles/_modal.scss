@@ -64,4 +64,20 @@
             }
         }
     }
+    .modal-buttons {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        p {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        p, span {
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+    }
 }

@@ -10,8 +10,9 @@ export default async function createBook(book, googleBookId, isFavorite) {
     if(isFavorite) {
         comments = book.comments[0]
     }
+    
+    let commentsResult = comments != undefined && comments.length > 0 ? generateComments(comments) : `<h4>There are no comments for this book... Yet :)</h4>`
 
-    let commentsResult = comments ? generateComments(comments) : `<h4>There are no comments for this book... Yet :)</h4>`
     let commentsSection = isFavorite 
         ? ` <div class="book-comments-section"> 
             <header>

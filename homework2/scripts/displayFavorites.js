@@ -3,7 +3,7 @@ import * as commentServices from '../services/commentsServices.js'
 
 import displaySearchResults from "./displaySearchResults.js"
 import addRemovetoFromFavorites from "./addRemovetoFromFavorites.js"
-import openCommentModal from "./openCommentModal.js"
+import openModal from "./openModal.js"
 
 export default function displayFavorites() {
     return favoritesServices.getAll()
@@ -30,17 +30,17 @@ export default function displayFavorites() {
                             btn.addEventListener('click', () => {
                                 let bookId = btn.parentElement.parentElement.parentElement.getAttribute('data-book-id')
                                 
-                                openCommentModal(bookId)
+                                openModal(bookId)
                             })
                         })
 
                         document.querySelectorAll('button[name="delete-comment"]').forEach(btn => {
                             btn.addEventListener('click', () => {
                                 let commentId = btn.parentElement.parentElement.getAttribute('data-comment-id')
-                                
-                                commentServices.deleteOne(commentId)
 
-                                displayFavorites();
+                                // The delete request is made inside the modal
+                                openModal(null, null, true, commentId)
+                                
                             })
                         })
 
@@ -56,7 +56,7 @@ export default function displayFavorites() {
                                     content
                                 }
 
-                                openCommentModal(null, commentObj)
+                                openModal(null, commentObj)
                                 
                                 displayFavorites();
                             })

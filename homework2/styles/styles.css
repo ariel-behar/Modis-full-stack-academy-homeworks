@@ -353,6 +353,20 @@ body {
 .modal form input[type=submit]:hover {
   transform: scale(1.05);
 }
+.modal .modal-buttons {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.modal .modal-buttons p:hover {
+  transform: scale(1.1);
+}
+.modal .modal-buttons p, .modal .modal-buttons span {
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
 
 @media (max-width: 1400px) {
   #main-section h1 {
