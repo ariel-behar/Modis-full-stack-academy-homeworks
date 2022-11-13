@@ -6,7 +6,10 @@ export default async function createBook(book, googleBookId, isFavorite) {
     
     let favoriteBookId = await isFavoriteResponse.bookId ? isFavoriteResponse.bookId : undefined;
     let addRemoveHTMLString = await isFavoriteResponse.htmlString;
-    let comments = book.comments[0];
+    let comments;
+    if(isFavorite) {
+        comments = book.comments[0]
+    }
 
     let commentsResult = comments ? generateComments(comments) : `<h4>There are no comments for this book... Yet :)</h4>`
     let commentsSection = isFavorite 

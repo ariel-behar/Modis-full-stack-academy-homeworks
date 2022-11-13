@@ -14,7 +14,7 @@ export default function request(url, method = 'GET', body){
         })
     }   
 
-    if(method = 'DELETE') {
+    if(method == 'DELETE') {
         return fetch(url, {
             method: 'DELETE',
         })

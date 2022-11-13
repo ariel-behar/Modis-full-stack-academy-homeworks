@@ -8,5 +8,5 @@ export const getAll = () => request(`${baseUrl}/favorite-books`, 'GET')
 
 export const add = book => request(`${baseUrl}/favorite-books`, 'POST', book)
 
-export const remove = bookId => request(`${baseUrl}/favorite-books/${bookId}`, 'DELETE')
+export const deleteOne = bookId => request(`${baseUrl}/favorite-books/${bookId}`, 'DELETE')
 

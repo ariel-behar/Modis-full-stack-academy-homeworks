@@ -93,7 +93,7 @@ body {
   flex-grow: 1;
   padding: 0 15px;
   border-radius: 10px;
-  border: 1px solid #e57373;
+  border: 1px solid #e67373;
   font-size: 1.5rem;
 }
 #main-section .search-form input[type=submit] {
@@ -105,7 +105,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   background-color: #00897b;
-  border: 1px solid #e57373;
+  border: 1px solid #e67373;
   color: #001c18;
 }
 #main-section .search-form input[type=submit]:hover {
@@ -226,7 +226,7 @@ body {
   background-color: white;
   padding-bottom: 20px;
   margin: 10px 0 10px;
-  border-top: 1px solid #e57373;
+  border-top: 1px solid #e67373;
 }
 .book-card .book-comments-section header {
   padding: 10px;
@@ -264,7 +264,7 @@ body {
   margin: 10px 0;
   padding: 10px;
   text-align: justify;
-  border-top: 1px dotted #e57373;
+  border-top: 1px dotted #e67373;
 }
 .book-card .book-comments-section .book-comments .comment h4.comment-title {
   font-weight: bold;
@@ -302,10 +302,15 @@ body {
   z-index: 1000;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 105, 92, 0.95);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.modal h3 {
+  color: white;
+  font-size: 3rem;
 }
 .modal .modal-exit-button {
   position: absolute;
@@ -341,6 +346,7 @@ body {
   max-width: 70%;
   border: none;
   margin: 20px auto 0;
+  border: 1px solid white;
   font-size: 1.5rem;
   cursor: pointer;
 }

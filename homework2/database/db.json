@@ -1,36 +1,12 @@
 {
-  "favorite-books": [
-    {
-      "id": 1668356873890,
-      "googleBookId": "N2USBQAAQBAJ",
-      "title": "The ASD Workbook",
-      "author": "author unknown",
-      "imageUrl": "http://books.google.com/books/content?id=N2USBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "This workbook helps parents to explain ASDs to their child and provide practical and emotional support following diagnosis. It is presented in a clear and positive way. As the workbook is completed an invaluable record of development will be created for parent and child to look back on together.",
-      "comments": []
-    }
-  ],
+  "favorite-books": [],
   "comments": [
     {
-      "id": 1668355085796,
-      "bookId": "1668355067562",
-      "title": "My title",
-      "content": "asdadslk la kjaldkads this is a comment",
-      "createdAt": "Sun Nov 13 2022 17:58:05 GMT+0200 (Eastern European Standard Time)"
-    },
-    {
-      "id": 1668356466812,
-      "bookId": "1668355067562",
-      "title": "asd",
-      "content": "asddsadsa",
-      "createdAt": "Sun Nov 13 2022 18:21:06 GMT+0200 (Eastern European Standard Time)"
-    },
-    {
-      "id": 1668356530951,
-      "bookId": "1668355067562",
-      "title": "adsadsads",
-      "content": "asdadsdsa",
-      "createdAt": "Sun Nov 13 2022 18:22:10 GMT+0200 (Eastern European Standard Time)"
+      "id": 1668369794848,
+      "bookId": "1668369691651",
+      "title": "a",
+      "content": "a",
+      "createdAt": "Sun Nov 13 2022 22:03:14 GMT+0200 (Eastern European Standard Time)"
     }
   ]
 }

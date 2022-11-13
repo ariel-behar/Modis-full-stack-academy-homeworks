@@ -1,21 +1,36 @@
+import * as favoritesServices from '../services/favoritesServices.js'
+import * as commentServices from '../services/commentsServices.js'
+
 import { generateResponseString } from "./isFavoriteBook.js";
 import FavoriteBook from '../model/FavoriteBook.js'
-import * as favoritesServices from '../services/favoritesServices.js'
+import displayFavorites from './displayFavorites.js';
 
-export default async function addRemovetoFromFavorites(currentTarget){
+export default async function addRemovetoFromFavorites(currentTarget, favoritesView){
     let googleBookId = currentTarget.parentElement.parentElement.getAttribute('data-google-book-id');
     let isFavorite = currentTarget.parentElement.parentElement.getAttribute('data-is-favorite') == 'yes' ? true : false;
     let favoriteBookId = currentTarget.parentElement.parentElement.getAttribute('data-book-id');
 
-    if(isFavorite) {
-        return favoritesServices.remove(favoriteBookId)
-            .then(res => res.json())
-            .then(data=> {
-                generateResponseString(false, currentTarget)
-                
-                currentTarget.parentElement.parentElement.setAttribute('data-is-favorite', 'no');
+    let deletionPromisesArr = []
 
-                console.log('record has been removed')
+    if(favoritesView) {
+        let commentsResponse = await commentServices.getAllbyBookId(favoriteBookId)
+        let comments = await commentsResponse.json();
+
+        for (const comment of comments) {
+            deletionPromisesArr.push(commentServices.deleteOne(comment.id))
+        }
+    }
+    
+    if(isFavorite) {
+        return Promise.all([favoritesServices.deleteOne(favoriteBookId)].concat(deletionPromisesArr))
+            .then(data=> {
+                if(favoritesView) {
+                    displayFavorites()
+                } else {
+                    generateResponseString(false, currentTarget)
+                
+                    currentTarget.parentElement.parentElement.setAttribute('data-is-favorite', 'no');
+                }
             })
             .catch(err => console.log(err))
     } else {
@@ -33,8 +48,6 @@ export default async function addRemovetoFromFavorites(currentTarget){
 
                 currentTarget.parentElement.parentElement.setAttribute('data-is-favorite', 'yes');
                 currentTarget.parentElement.parentElement.setAttribute('data-book-id', data.id);
-                
-                console.log('record has been added')
             })
             .catch(err => console.log(err))
     }

@@ -4,14 +4,11 @@ import * as commentServices from '../services/commentsServices.js'
 import displaySearchResults from "./displaySearchResults.js"
 import addRemovetoFromFavorites from "./addRemovetoFromFavorites.js"
 import openCommentModal from "./openCommentModal.js"
-import clearSearchResultsSection from "./clearSearchResultsSection.js"
 
 export default function displayFavorites() {
     return favoritesServices.getAll()
         .then(res => res.json())
         .then(books => {
-            clearSearchResultsSection()
-
             if(books.length > 0) {
                 for (const book of books) {
                     commentServices.getAllbyBookId(book.id)
@@ -25,7 +22,7 @@ export default function displayFavorites() {
                     .then(() => {
                         document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
                             paragraph.addEventListener('click', (e) => {
-                                addRemovetoFromFavorites(e.currentTarget)
+                                addRemovetoFromFavorites(e.currentTarget, true)
                             })
                         });
 
@@ -34,6 +31,34 @@ export default function displayFavorites() {
                                 let bookId = btn.parentElement.parentElement.parentElement.getAttribute('data-book-id')
                                 
                                 openCommentModal(bookId)
+                            })
+                        })
+
+                        document.querySelectorAll('button[name="delete-comment"]').forEach(btn => {
+                            btn.addEventListener('click', () => {
+                                let commentId = btn.parentElement.parentElement.getAttribute('data-comment-id')
+                                
+                                commentServices.deleteOne(commentId)
+
+                                displayFavorites();
+                            })
+                        })
+
+                        document.querySelectorAll('button[name="edit-comment"]').forEach(btn => {
+                            btn.addEventListener('click', () => {
+                                let commentId = btn.parentElement.parentElement.getAttribute('data-comment-id')
+                                let title = btn.parentElement.parentElement.children[0].textContent
+                                let content = btn.parentElement.parentElement.children[1].textContent
+
+                                let commentObj = {
+                                    commentId,
+                                    title, 
+                                    content
+                                }
+
+                                openCommentModal(null, commentObj)
+                                
+                                displayFavorites();
                             })
                         })
                     })
