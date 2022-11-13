@@ -5,6 +5,7 @@ import addRemovetoFromFavorites from './scripts/addRemovetoFromFavorites.js'
 import displaySearchResults from './scripts/displaySearchResults.js'
 import clearSearchResultsSection from './scripts/clearSearchResultsSection.js'
 import toggleSearchResultsSection from './scripts/toggleSearchResultsSection.js'
+import openCommentModal from './scripts/openCommentModal.js'
 
 let searchForm = document.querySelector('.search-form')
 let shrinkSectionBtn = document.querySelector('.shrink-section-button')
@@ -24,11 +25,13 @@ searchForm.addEventListener('submit', (e) => {
 
                 displaySearchResults(data.items, searchTerm)
                     .then(() => {
-                        document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
-                            paragraph.addEventListener('click', (e) => {
+                        document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(par => {
+                            par.addEventListener('click', (e) => {
                                 addRemovetoFromFavorites(e.currentTarget)
                             })
                         });
+
+                      
                     })
             })
             .catch(err => console.log(err))
@@ -51,7 +54,17 @@ showFavoritesBtn.addEventListener('click', (e) => {
                                 addRemovetoFromFavorites(e.currentTarget)
                             })
                         });
+
+                        document.querySelectorAll('button[name="add-comment"]').forEach(btn => {
+                            btn.addEventListener('click', () => {
+                                let bookId = btn.parentElement.parentElement.parentElement.getAttribute('data-book-id')
+                                
+                                openCommentModal(bookId)
+                            })
+                        })
                     })
+
+                   
             } else {
                 displaySearchResults(false, 'Favorites')
             }

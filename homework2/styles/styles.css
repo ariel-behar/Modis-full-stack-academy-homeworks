@@ -1,19 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
-:root {
-  --green-success-color: #087f23;
-  --red-danger-color: #f44336;
-  --green-border-color: #e57373;
-  --green-submit-color: #00897b;
-  --green-box-shadow-color: #b2dfdb;
-  --green-background-color: #e0f2f1;
-  --dark-text-shadow: rgb(0, 28, 24) 3px 0px 0px, rgb(0, 28, 24) 2.83487px 0.981584px 0px, rgb(0, 28, 24) 2.35766px 1.85511px 0px, rgb(0, 28, 24) 1.62091px 2.52441px 0px, rgb(0, 28, 24) 0.705713px 2.91581px 0px, rgb(0, 28, 24) -0.287171px 2.98622px 0px, rgb(0, 28, 24) -1.24844px 2.72789px 0px, rgb(0, 28, 24) -2.07227px 2.16926px 0px, rgb(0, 28, 24) -2.66798px 1.37182px 0px, rgb(0, 28, 24) -2.96998px 0.42336px 0px, rgb(0, 28, 24) -2.94502px -0.571704px 0px, rgb(0, 28, 24) -2.59586px -1.50383px 0px, rgb(0, 28, 24) -1.96093px -2.27041px 0px, rgb(0, 28, 24) -1.11013px -2.78704px 0px, rgb(0, 28, 24) -0.137119px -2.99686px 0px, rgb(0, 28, 24) 0.850987px -2.87677px 0px, rgb(0, 28, 24) 1.74541px -2.43999px 0px, rgb(0, 28, 24) 2.44769px -1.73459px 0px, rgb(0, 28, 24) 2.88051px -0.838247px 0px;
-}
-
+@import "https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap";
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-rif;
   font-weight: lighter;
   color: #001c18;
 }
@@ -30,10 +20,6 @@ body {
   overflow-x: hidden;
 }
 
-.filled-star {
-  font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 200, "opsz" 48;
-}
-
 #main-section {
   min-height: 30vh;
   height: 100vh;
@@ -42,9 +28,9 @@ body {
   background-size: cover;
   background-position: center;
   padding: 30px;
-  box-shadow: 0px 11px 20px var(--green-box-shadow-color);
+  box-shadow: 0px 11px 20px #b2dfdb;
   position: fixed;
-  z-index: 1000;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,7 +50,7 @@ body {
   left: 50px;
   font-size: 3.5rem;
   font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 200, "opsz" 48;
-  text-shadow: var(--dark-text-shadow);
+  text-shadow: rgb(0, 28, 24) 3px 0px 0px, rgb(0, 28, 24) 2.83487px 0.981584px 0px, rgb(0, 28, 24) 2.35766px 1.85511px 0px, rgb(0, 28, 24) 1.62091px 2.52441px 0px, rgb(0, 28, 24) 0.705713px 2.91581px 0px, rgb(0, 28, 24) -0.287171px 2.98622px 0px, rgb(0, 28, 24) -1.24844px 2.72789px 0px, rgb(0, 28, 24) -2.07227px 2.16926px 0px, rgb(0, 28, 24) -2.66798px 1.37182px 0px, rgb(0, 28, 24) -2.96998px 0.42336px 0px, rgb(0, 28, 24) -2.94502px -0.571704px 0px, rgb(0, 28, 24) -2.59586px -1.50383px 0px, rgb(0, 28, 24) -1.96093px -2.27041px 0px, rgb(0, 28, 24) -1.11013px -2.78704px 0px, rgb(0, 28, 24) -0.137119px -2.99686px 0px, rgb(0, 28, 24) 0.850987px -2.87677px 0px, rgb(0, 28, 24) 1.74541px -2.43999px 0px, rgb(0, 28, 24) 2.44769px -1.73459px 0px, rgb(0, 28, 24) 2.88051px -0.838247px 0px;
 }
 #main-section .show-favorites-button {
   cursor: pointer;
@@ -74,8 +60,9 @@ body {
   right: 50px;
   font-size: 2rem;
 }
-#main-section .show-favorites-button span {
+#main-section .show-favorites-button span.filled-star {
   color: white;
+  font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 200, "opsz" 48;
 }
 #main-section .mask {
   background-color: rgba(255, 255, 255, 0.9);
@@ -88,7 +75,7 @@ body {
   font-size: 7.5rem;
   font-weight: bold;
   color: rgb(255, 255, 255);
-  text-shadow: var(--dark-text-shadow);
+  text-shadow: rgb(0, 28, 24) 3px 0px 0px, rgb(0, 28, 24) 2.83487px 0.981584px 0px, rgb(0, 28, 24) 2.35766px 1.85511px 0px, rgb(0, 28, 24) 1.62091px 2.52441px 0px, rgb(0, 28, 24) 0.705713px 2.91581px 0px, rgb(0, 28, 24) -0.287171px 2.98622px 0px, rgb(0, 28, 24) -1.24844px 2.72789px 0px, rgb(0, 28, 24) -2.07227px 2.16926px 0px, rgb(0, 28, 24) -2.66798px 1.37182px 0px, rgb(0, 28, 24) -2.96998px 0.42336px 0px, rgb(0, 28, 24) -2.94502px -0.571704px 0px, rgb(0, 28, 24) -2.59586px -1.50383px 0px, rgb(0, 28, 24) -1.96093px -2.27041px 0px, rgb(0, 28, 24) -1.11013px -2.78704px 0px, rgb(0, 28, 24) -0.137119px -2.99686px 0px, rgb(0, 28, 24) 0.850987px -2.87677px 0px, rgb(0, 28, 24) 1.74541px -2.43999px 0px, rgb(0, 28, 24) 2.44769px -1.73459px 0px, rgb(0, 28, 24) 2.88051px -0.838247px 0px;
 }
 
 .search-form {
@@ -107,7 +94,7 @@ body {
   flex-grow: 1;
   padding: 0 15px;
   border-radius: 10px;
-  border: 1px solid var(--green-border-color);
+  border: 1px solid #e57373;
   font-size: 1.5rem;
 }
 .search-form input[type=submit] {
@@ -118,8 +105,8 @@ body {
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
-  background-color: var(--green-submit-color);
-  border: 1px solid var(--green-border-color);
+  background-color: #00897b;
+  border: 1px solid #e57373;
   color: #001c18;
 }
 
@@ -127,7 +114,7 @@ body {
   margin-top: 30vh;
   width: 100%;
   padding: 50px;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 1s ease-in-out 0.7s;
 }
 #search-results-section .search-results-heading {
@@ -145,10 +132,10 @@ body {
 
 .book-card {
   flex-basis: calc(33% - 30px);
-  background-color: var(--green-background-color);
+  background-color: #e0f2f1;
   padding: 10px 10px 30px 10px;
-  box-shadow: 3px 3px 10px var(--green-box-shadow-color);
-  border: 1px solid var(--green-box-shadow-color);
+  box-shadow: 3px 3px 10px #b2dfdb;
+  border: 1px solid #b2dfdb;
   min-height: 40vh;
   max-height: auto;
   position: relative;
@@ -158,7 +145,7 @@ body {
   flex-wrap: wrap;
 }
 .book-card:hover {
-  box-shadow: 7px 7px 10px var(--green-box-shadow-color);
+  box-shadow: 7px 7px 10px #b2dfdb;
 }
 .book-card .book-heading {
   padding: 15px;
@@ -184,7 +171,7 @@ body {
   height: 100%;
   max-height: 150px;
   min-width: 100%;
-  background-color: var(--green-background-color);
+  background-color: #e0f2f1;
   font-size: 1.6rem;
   padding: 10px;
   align-self: flex-start;
@@ -198,9 +185,9 @@ body {
   min-width: 60%;
   text-align: center;
   padding: 0 30px;
-  background-color: var(--green-background-color);
-  box-shadow: 3px 3px 10px var(--green-box-shadow-color);
-  border: 1px solid var(--green-box-shadow-color);
+  background-color: #e0f2f1;
+  box-shadow: 3px 3px 10px #b2dfdb;
+  border: 1px solid #b2dfdb;
   font-size: 2.1rem;
   font-weight: bold;
   cursor: pointer;
@@ -210,10 +197,10 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 .book-card .favorites-div span.add-to-favorites {
-  color: var(--green-success-color);
+  color: #087f23;
 }
 .book-card .favorites-div span.remove-from-favorites {
-  color: var(--red-danger-color);
+  color: #f44336;
 }
 .book-card .favorites-div span.material-symbols-outlined {
   margin-left: 5px;
@@ -224,44 +211,65 @@ body {
   font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 200, "opsz" 48;
 }
 .book-card .book-comments-section {
-  overflow: scroll;
+  overflow-y: scroll;
   min-height: auto;
-  max-height: 200px;
+  max-height: 220px;
   width: 100%;
   background-color: white;
   padding-bottom: 20px;
   margin: 10px 0 10px;
-  border-top: 1px solid var(--green-border-color);
+  border-top: 1px solid #e57373;
 }
-.book-card .book-comments-section .book-comments-section-title {
+.book-card .book-comments-section header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.book-card .book-comments-section header .book-comments-section-title {
+  flex-grow: 1;
   font-size: 2.3rem;
+  font-weight: 400;
   text-align: center;
+}
+.book-card .book-comments-section header button[name=add-comment] {
+  background-color: #0077c2;
+  color: white;
+  min-height: 28px;
+  min-width: 100px;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.book-card .book-comments-section header button[name=add-comment]:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 5px #b2dfdb;
 }
 .book-card .book-comments-section .book-comments {
   display: flex;
   flex-direction: column;
 }
-.book-card .book-comments-section .book-comments .comment {
-  margin: 10px 0;
-  padding: 10px;
-  text-align: justify;
-  border-top: 1px dotted var(--green-border-color);
-}
 .book-card .book-comments-section .book-comments h4 {
   font-size: 1.6rem;
   margin-bottom: 5px;
 }
-.book-card .book-comments-section .book-comments h4.comment-title {
+.book-card .book-comments-section .book-comments .comment {
+  margin: 10px 0;
+  padding: 10px;
+  text-align: justify;
+  border-top: 1px dotted #e57373;
+}
+.book-card .book-comments-section .book-comments .comment h4.comment-title {
   font-weight: bold;
 }
-.book-card .book-comments-section .comment-content {
+.book-card .book-comments-section .book-comments .comment .comment-content {
   font-size: 1.5rem;
+  margin-bottom: 10px;
 }
-.book-card .book-comments-section .comment .comment-buttons {
+.book-card .book-comments-section .book-comments .comment .comment-buttons {
   display: flex;
   justify-content: space-evenly;
 }
-.book-card .book-comments-section .comment .comment-buttons button {
+.book-card .book-comments-section .book-comments .comment .comment-buttons button {
   margin-top: 10px;
   min-height: 28px;
   min-width: 100px;
@@ -270,15 +278,66 @@ body {
   font-size: 1.4rem;
   cursor: pointer;
 }
-.book-card .book-comments-section .comment .comment-buttons button:hover {
+.book-card .book-comments-section .book-comments .comment .comment-buttons button:hover {
   transform: scale(1.05);
-  box-shadow: 3px 3px 5px var(--green-box-shadow-color);
+  box-shadow: 3px 3px 5px #b2dfdb;
 }
-.book-card .book-comments-section .comment .comment-buttons button[name=edit-comment] {
+.book-card .book-comments-section .book-comments .comment .comment-buttons button[name=edit-comment] {
   background-color: #42a5f5;
 }
-.book-card .book-comments-section .comment .comment-buttons button[name=delete-comment] {
-  background-color: var(--red-danger-color);
+.book-card .book-comments-section .book-comments .comment .comment-buttons button[name=delete-comment] {
+  background-color: #f44336;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal-exit-button {
+  position: absolute;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.modal .modal-exit-button span {
+  color: white;
+}
+.modal form {
+  min-width: 30%;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.modal form label {
+  color: white;
+  margin: 20px 0 5px 0;
+  font-size: 1.5rem;
+}
+.modal form input[type=text], .modal form textarea {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.modal form input[type=submit] {
+  background-color: #0077c2;
+  color: white;
+  min-height: 28px;
+  min-width: 30%;
+  max-width: 70%;
+  border: none;
+  margin: 20px auto 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal form input[type=submit]:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 1400px) {

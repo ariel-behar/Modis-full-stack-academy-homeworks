@@ -1,7 +1,7 @@
 import generateComments from "./generateComments.js";
 import { isFavoriteBook } from "./isFavoriteBook.js";
 
-export default async function createBook(book, googleBookId) {
+export default async function createBook(book, googleBookId, isFavorite) {
     let isFavoriteResponse = await isFavoriteBook(googleBookId);
     
     let favoriteBookId = await isFavoriteResponse.bookId ? isFavoriteResponse.bookId : undefined;
@@ -9,6 +9,17 @@ export default async function createBook(book, googleBookId) {
     let comments = await isFavoriteResponse.bookObj?.comments.length > 0 ? isFavoriteResponse.bookObj.comments : false;
 
     let commentsResult = comments ? generateComments(comments) : `<h4>There are no comments for this book... Yet :)</h4>`
+    let commentsSection = isFavorite 
+        ? ` <div class="book-comments-section"> 
+            <header>
+                <h3 class="book-comments-section-title">Comments</h3>
+                <button name="add-comment">Add Comment</button>
+            </header>
+            <div class="book-comments">
+                ${ commentsResult }
+            </div>
+        </div>` 
+        : "";
     
     let bookCard = document.createElement('article');
         bookCard.classList.add('book-card')
@@ -26,15 +37,7 @@ export default async function createBook(book, googleBookId) {
             </header>
             <img class="book-image" src="${ book.imageLinks?.thumbnail ? book.imageLinks.thumbnail : book.imageUrl}">
             <p class="book-description">${book.description ? book.description : ''}</p>
-            <div class="book-comments-section"> 
-                <header>
-                    <h3 class="book-comments-section-title">Comments</h3>
-                    <button name="add-comment" value="add-comment">Add Comment</button>
-                </header>
-                <div class="book-comments">
-                    ${ commentsResult }
-                </div>
-            </div>`
+            ${commentsSection}`
             
             
             

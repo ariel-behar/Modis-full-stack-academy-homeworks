@@ -2,7 +2,11 @@
 	margin-top: 30vh;
 	width: 100%;
 	padding: 50px;
-	opacity: 1;
+	
+	// Need to change to 0
+	opacity: 0;
+	// Need to change to 0
+
 	transition: opacity 1s ease-in-out 0.7s;
 	.search-results-heading {
 		margin-bottom: 50px;
@@ -19,10 +23,10 @@
 }
 .book-card {
 	flex-basis: calc(33% - 30px);
-	background-color: var(--green-background-color);
+	background-color: $green-background-color;
 	padding: 10px 10px 30px 10px;
-	box-shadow: 3px 3px 10px var(--green-box-shadow-color);
-	border: 1px solid var(--green-box-shadow-color);
+	box-shadow: 3px 3px 10px $green-box-shadow-color;
+	border: 1px solid $green-box-shadow-color;
 	min-height: 40vh;
 	max-height: auto;
 	position: relative;
@@ -31,7 +35,7 @@
 	align-items: flex-start;
 	flex-wrap: wrap;
 	&:hover {
-		box-shadow: 7px 7px 10px var(--green-box-shadow-color);
+		box-shadow: 7px 7px 10px $green-box-shadow-color;
 	}
 	.book-heading {
 		padding: 15px;
@@ -57,7 +61,7 @@
 		height: 100%;
 		max-height: 150px;
 		min-width: 100%;
-		background-color: var(--green-background-color);
+		background-color: $green-background-color;
 		font-size: 1.6rem;
 		padding: 10px;
 		align-self: flex-start;
@@ -71,9 +75,9 @@
 		min-width: 60%;
 		text-align: center;
 		padding: 0 30px;
-		background-color: var(--green-background-color);
-		box-shadow: 3px 3px 10px var(--green-box-shadow-color);
-		border: 1px solid var(--green-box-shadow-color);
+		background-color: $green-background-color;
+		box-shadow: 3px 3px 10px $green-box-shadow-color;
+		border: 1px solid $green-box-shadow-color;
 		font-size: 2.1rem;
 		font-weight: bold;
 		cursor: pointer;
@@ -84,77 +88,103 @@
 			}
 		}
 		span.add-to-favorites {
-			color: var(--green-success-color);
+			color: $green-success-color;
 		}
 		span.remove-from-favorites {
-			color: var(--red-danger-color);
+			color: $red-danger-color;
 		}
 		span.material-symbols-outlined {
 			margin-left: 5px;
 			font-size: 2rem;
-			font-variation-settings: 'FILL' 0, 'wght' 800, 'GRAD' 200, 'opsz' 48;
+			font-variation-settings: $icon-not-filled;
 		}
 		span.material-symbols-outlined.filled-star {
-			font-variation-settings: 'FILL' 1, 'wght' 800, 'GRAD' 200, 'opsz' 48;
+			font-variation-settings: $icon-filled;
 		}
 	}
 	.book-comments-section {
-		overflow: scroll;
+		overflow-y: scroll;
 		min-height: auto;
-		max-height: 200px;
+		max-height: 220px;
 		width: 100%;
 		background-color: white;
 		padding-bottom: 20px;
 		margin: 10px 0 10px;
-		border-top: 1px solid var(--green-border-color);
-		.book-comments-section-title {
-			font-size: 2.3rem;
-			text-align: center;
+		border-top: 1px solid $green-border-color;
+
+		header {
+			padding: 10px;
+			display: flex;
+			justify-content: space-around;
+
+			.book-comments-section-title {
+				flex-grow: 1;
+				font-size: 2.3rem;
+				font-weight: 400;
+				text-align: center;
+				
+			}
+
+			button[name="add-comment"] {
+				background-color: $dark-blue-add-color;
+				color: white;
+				min-height: 28px;
+				min-width: 100px;
+				border: none;
+				
+				font-size: 1.4rem;
+				cursor: pointer;
+				&:hover {
+					transform: scale(1.05);
+					box-shadow: 3px 3px 5px $green-box-shadow-color;
+				}
+			}
 		}
+		
 		.book-comments {
 			display: flex;
 			flex-direction: column;
-			.comment {
-				margin: 10px 0;
-				padding: 10px;
-				text-align: justify;
-				border-top: 1px dotted var(--green-border-color);
-			}
 			h4 {
 				font-size: 1.6rem;
 				margin-bottom: 5px;
 			}
-			h4.comment-title {
-				font-weight: bold;
-			}
-		}
-		.comment-content {
-			font-size: 1.5rem;
-		}
-		.comment {
-			.comment-buttons {
-				display: flex;
-				justify-content: space-evenly;
-				button {
-					margin-top: 10px;
-					min-height: 28px;
-					min-width: 100px;
-					border: none;
-					color: white;
-					font-size: 1.4rem;
-					cursor: pointer;
-					&:hover {
-						transform: scale(1.05);
-						box-shadow: 3px 3px 5px var(--green-box-shadow-color);
+			.comment {
+				margin: 10px 0;
+				padding: 10px;
+				text-align: justify;
+				border-top: 1px dotted $green-border-color;
+				h4.comment-title {
+					font-weight: bold;
+				}
+				.comment-content {
+					font-size: 1.5rem;
+					margin-bottom: 10px;
+				}
+				.comment-buttons {
+					display: flex;
+					justify-content: space-evenly;
+					button {
+						margin-top: 10px;
+						min-height: 28px;
+						min-width: 100px;
+						border: none;
+						color: white;
+						font-size: 1.4rem;
+						cursor: pointer;
+						&:hover {
+							transform: scale(1.05);
+							box-shadow: 3px 3px 5px $green-box-shadow-color;
+						}
+					}
+					button[name="edit-comment"] {
+						background-color: $light-blue-edit-color;
+					}
+					button[name="delete-comment"] {
+						background-color: $red-danger-color;
 					}
 				}
-				button[name="edit-comment"] {
-					background-color: #42a5f5;
-				}
-				button[name="delete-comment"] {
-					background-color: var(--red-danger-color);
-				}
 			}
 		}
+		
 	}
 }
