@@ -1,5 +1,9 @@
 import Comment from '../model/Comment.js'
+
 import * as commentServices from '../services/commentsServices.js'
+
+import displayFavorites from './displayFavorites.js';
+import clearSearchResultsSection from './clearSearchResultsSection.js'
 
 let body = document.querySelector('body')
 let modalHtml = `
@@ -16,7 +20,6 @@ let modalHtml = `
         </form>
     </div>
 `
-
 
 export default function openCommentModal(bookId) {
     body.insertAdjacentHTML('afterbegin', modalHtml);
@@ -38,9 +41,14 @@ export default function openCommentModal(bookId) {
 
         commentServices.add(comment)
             .then(res => res.json())
-            .then(data => console.log(data))
-            .catch(err => console.log(err))
+            .then(data => {
+                body.removeChild(modal);
+                body.style.overflow = 'scroll';
 
+                clearSearchResultsSection()
+                displayFavorites()
+            })
+            .catch(err => console.log(err))
     })
         
     modalExitButton.addEventListener("click", (e) => {

@@ -6,7 +6,7 @@ export default async function createBook(book, googleBookId, isFavorite) {
     
     let favoriteBookId = await isFavoriteResponse.bookId ? isFavoriteResponse.bookId : undefined;
     let addRemoveHTMLString = await isFavoriteResponse.htmlString;
-    let comments = await isFavoriteResponse.bookObj?.comments.length > 0 ? isFavoriteResponse.bookObj.comments : false;
+    let comments = book.comments[0];
 
     let commentsResult = comments ? generateComments(comments) : `<h4>There are no comments for this book... Yet :)</h4>`
     let commentsSection = isFavorite 
@@ -37,11 +37,7 @@ export default async function createBook(book, googleBookId, isFavorite) {
             </header>
             <img class="book-image" src="${ book.imageLinks?.thumbnail ? book.imageLinks.thumbnail : book.imageUrl}">
             <p class="book-description">${book.description ? book.description : ''}</p>
-            ${commentsSection}`
-            
-            
-            
-        ;
-
+            ${commentsSection}`;
+        
     return bookCard;
 }

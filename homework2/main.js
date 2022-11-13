@@ -1,11 +1,7 @@
-import * as googleBooksServices from './services/googleBooksServices.js'
-import * as favoritesServices from './services/favoritesServices.js'
+import displayGoogleSearchResults from './scripts/displayGoogleSearchResults.js'
 
-import addRemovetoFromFavorites from './scripts/addRemovetoFromFavorites.js'
-import displaySearchResults from './scripts/displaySearchResults.js'
-import clearSearchResultsSection from './scripts/clearSearchResultsSection.js'
 import toggleSearchResultsSection from './scripts/toggleSearchResultsSection.js'
-import openCommentModal from './scripts/openCommentModal.js'
+import displayFavorites from './scripts/displayFavorites.js'
 
 let searchForm = document.querySelector('.search-form')
 let shrinkSectionBtn = document.querySelector('.shrink-section-button')
@@ -18,58 +14,20 @@ searchForm.addEventListener('submit', (e) => {
     let processedSearchTerm = searchTerm.split(' ').join('+')
 
     if (searchTerm.length > 0) {
-        googleBooksServices.search(processedSearchTerm)
-            .then(res => res.json())
-            .then(data => {
-                clearSearchResultsSection();
+        displayGoogleSearchResults(searchTerm, processedSearchTerm)
+    } else {
+        document.querySelector('.form-feedback-message').innerText = 'Book name needs to be at least 1 character long.'
 
-                displaySearchResults(data.items, searchTerm)
-                    .then(() => {
-                        document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(par => {
-                            par.addEventListener('click', (e) => {
-                                addRemovetoFromFavorites(e.currentTarget)
-                            })
-                        });
-
-                      
-                    })
-            })
-            .catch(err => console.log(err))
+        setTimeout(() => {
+            document.querySelector('.form-feedback-message').innerText = ''
+        }, 3000);
     }
 })
 
 showFavoritesBtn.addEventListener('click', (e) => {
     e.preventDefault();
-
-    favoritesServices.getAll()
-        .then(res => res.json())
-        .then(data => {
-            clearSearchResultsSection()
-
-            if(data.length > 0) {
-                displaySearchResults(data, 'Favorites')
-                    .then(() => {
-                        document.querySelectorAll('.add-remove-to-from-favorites-par').forEach(paragraph => {
-                            paragraph.addEventListener('click', (e) => {
-                                addRemovetoFromFavorites(e.currentTarget)
-                            })
-                        });
-
-                        document.querySelectorAll('button[name="add-comment"]').forEach(btn => {
-                            btn.addEventListener('click', () => {
-                                let bookId = btn.parentElement.parentElement.parentElement.getAttribute('data-book-id')
-                                
-                                openCommentModal(bookId)
-                            })
-                        })
-                    })
-
-                   
-            } else {
-                displaySearchResults(false, 'Favorites')
-            }
-        })
-        .catch(err => console.log(err))
+    
+    displayFavorites()
 })
 
 shrinkSectionBtn.addEventListener('click', () => {

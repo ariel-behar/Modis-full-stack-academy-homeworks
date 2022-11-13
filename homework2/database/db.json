@@ -1,67 +1,36 @@
 {
   "favorite-books": [
     {
-      "id": 1668261464441,
-      "googleBookId": "FQrlAAAAMAAJ",
-      "title": "AIAA 92-4519 - AIAA 92-4671",
+      "id": 1668356873890,
+      "googleBookId": "N2USBQAAQBAJ",
+      "title": "The ASD Workbook",
       "author": "author unknown",
-      "imageUrl": "http://books.google.com/books/content?id=FQrlAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "description": "",
-      "comments": [
-        {
-          "title": "First title",
-          "content": "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellent"
-        },
-        {
-          "title": "Second title",
-          "content": "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellent"
-        }
-      ]
-    },
-    {
-      "id": 1668261518333,
-      "googleBookId": "xEApjgEACAAJ",
-      "title": "React.Js Essentials",
-      "author": "Artemij Fedosejev",
-      "imageUrl": "http://books.google.com/books/content?id=xEApjgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "description": "A fast-paced guide to designing and building scalable and maintainable web apps with React.jsAbout This Book• Build maintainable and performant user interfaces for your web applications using React.js• Create reusable React.js components to save time and effort in maintaining your user interfaces• Learn how to build a ready-to-deploy React.js web application, following our step-by-step tutorialWho This Book Is ForIf you're a front-end developer with knowledge of jQuery and its libraries, along with frameworks, such as Angular.JS and Backbone.JS, or native JavaScript development, and you wish to use the fastest web user interface library there is, then this book is ideal for you.What You Will Learn• Install powerful React.js tools to make development much more efficient• Create React elements with properties and children• Get started with stateless and stateful React components• Use JSX to speed up your React.js development process• Add reactivity to your React components with lifecycle methods• Integrate your React components with other JavaScript libraries• Utilize the Flux application architecture with your React components• Test your React components with Jest test frameworkIn DetailBuilding web applications with maintainable and performant user interfaces is a challenge that many have faced for more than a decade, but no one has risen to this challenge quite like React.js. Today React.js is used by Facebook, Instagram, Khan Academy, and Imperial College London, to name a few. Many new users recognize the benefits of React.js and adopt it in their own projects, forming a fast-growing community. The speed at which React.js has evolved promises a bright future for those who invest in learning it today.React.js Essentials will take you on a fast-paced journey through building your own maintainable React.js application. Begin by exploring how you can create single and multiple user interface elements. Create stateless and stateful components and make them reactive, learn to interact between your components and lifecycle methods and gauge how to effectively integrate your user interface components with other JavaScript libraries. Delve deep into the core elements of the Flux architecture and learn how to manage your application using stores. Finish by going that extra mile with the Jest test framework, running multiple tests on your application and find solutions to scale it further without complexity.Style and approachThe book adopts a step-by-step, hands-on approach with ample codes to ensure you learn React.js at a fast pace.",
-      "comments": [
-        {
-          "title": "First title",
-          "content": "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellent"
-        },
-        {
-          "title": "Second title",
-          "content": "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellent"
-        }
-      ]
-    },
-    {
-      "id": 1668261520577,
-      "googleBookId": "XCLhDwAAQBAJ",
-      "title": "React and React Native",
-      "author": "Adam Boduch & Roy Derks",
-      "imageUrl": "http://books.google.com/books/content?id=XCLhDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "Get up to speed with React, React Native, GraphQL and Apollo for building cross-platform native apps with the help of practical examples Key Features Covers the latest features of React such as Hooks, Suspense, NativeBase, and Apollo in this updated third edition Get to grips with the React architecture for writing easy-to-manage web and mobile applications Understand GraphQL and Apollo for building a scalable backend for your cross-platform apps Book Description React and React Native, Facebook’s innovative User Interface (UI) libraries, are designed to help you build robust cross-platform web and mobile applications. This updated third edition is improved and updated to cover the latest version of React. The book particularly focuses on the latest developments in the React ecosystem, such as modern Hook implementations, code splitting using lazy components and Suspense, user interface framework components using Material-UI, and Apollo. In terms of React Native, the book has been updated to version 0.62 and demonstrates how to apply native UI components for your existing mobile apps using NativeBase. You will begin by learning about the essential building blocks of React components. Next, you’ll progress to working with higher-level functionalities in application development, before putting this knowledge to use by developing user interface components for the web and for native platforms. In the concluding chapters, you’ll learn how to bring your application together with a robust data architecture. By the end of this book, you’ll be able to build React applications for the web and React Native applications for multiple mobile platforms. What you will learn Delve into the React architecture, component properties, state, and context Get to grips with React Hooks for handling functions and components Implement code splitting in React using lazy components and Suspense Build robust user interfaces for mobile and desktop apps using Material-UI Write shared components for Android and iOS mobile apps using React Native Simplify layout design for React Native apps using NativeBase Write GraphQL schemas to power web and mobile apps Implement web and mobile components that are driven by Apollo Who this book is for This book is for any JavaScript developer who wants to start learning how to use Facebook’s UI libraries, React and React Native, for mobile and web application development. Although no prior knowledge of React is needed, working knowledge of JavaScript programming will help you understand the concepts covered in the book more effectively.",
-      "comments": [
-        {
-          "title": "First title",
-          "content": "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellent"
-        },
-        {
-          "title": "Second title",
-          "content": "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellent"
-        }
-      ]
+      "imageUrl": "http://books.google.com/books/content?id=N2USBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "description": "This workbook helps parents to explain ASDs to their child and provide practical and emotional support following diagnosis. It is presented in a clear and positive way. As the workbook is completed an invaluable record of development will be created for parent and child to look back on together.",
+      "comments": []
     }
   ],
   "comments": [
     {
-      "id": 1668334922074,
-      "bookId": "1668261464441",
+      "id": 1668355085796,
+      "bookId": "1668355067562",
       "title": "My title",
-      "content": "My content",
-      "createdAt": "Sun Nov 13 2022 12:22:02 GMT+0200 (Eastern European Standard Time)"
+      "content": "asdadslk la kjaldkads this is a comment",
+      "createdAt": "Sun Nov 13 2022 17:58:05 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": 1668356466812,
+      "bookId": "1668355067562",
+      "title": "asd",
+      "content": "asddsadsa",
+      "createdAt": "Sun Nov 13 2022 18:21:06 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": 1668356530951,
+      "bookId": "1668355067562",
+      "title": "adsadsads",
+      "content": "asdadsdsa",
+      "createdAt": "Sun Nov 13 2022 18:22:10 GMT+0200 (Eastern European Standard Time)"
     }
   ]
 }
