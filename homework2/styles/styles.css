@@ -25,11 +25,11 @@ h3 {
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 h5 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 h6 {
@@ -122,7 +122,7 @@ body {
   flex-grow: 1;
   padding: 0 15px;
   border-radius: 10px;
-  border: 1px solid #e67373;
+  border: 1px solid #00897b;
 }
 #main-section .search-form input[type=submit] {
   min-width: 100px;
@@ -134,7 +134,7 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   background-color: #00897b;
-  border: 1px solid #e67373;
+  border: 1px solid #00897b;
   color: #001c18;
 }
 #main-section .search-form input[type=submit]:hover {
@@ -150,7 +150,7 @@ body {
   margin-top: 30vh;
   width: 100%;
   padding: 50px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1s ease-in-out 0.7s;
 }
 #search-results-section .search-results-term {
@@ -169,24 +169,24 @@ body {
 .book-card {
   flex-basis: calc(33% - 30px);
   background-color: #e0f2f1;
-  padding: 10px 10px 30px 10px;
   box-shadow: 3px 3px 10px #b2dfdb;
   border: 1px solid #b2dfdb;
-  min-height: 40vh;
-  max-height: auto;
   position: relative;
+  height: auto;
+  max-height: 70vh;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 .book-card:hover {
   box-shadow: 7px 7px 10px #b2dfdb;
 }
 .book-card .book-heading {
-  padding: 15px;
-  flex-basis: 50%;
-  align-self: flex-start;
+  margin: 0 auto;
+  padding: 15px 0 10px;
+  width: 100%;
+  background-color: #b2dfdb;
+  text-align: center;
 }
 .book-card .book-heading .book-title {
   font-weight: bold;
@@ -194,21 +194,26 @@ body {
 .book-card .book-heading .book-author {
   font-style: italic;
 }
-.book-card .book-image {
-  margin: 10px;
-  margin-left: auto;
-  min-height: auto;
+.book-card .book-content {
+  width: 100%;
   align-self: flex-start;
-  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
-.book-card .book-description {
-  height: 100%;
-  max-height: 150px;
-  min-width: 100%;
+.book-card .book-content .book-image {
+  height: 200px;
+  align-self: flex-start;
+}
+.book-card .book-content .book-description {
+  margin-left: auto;
+  min-height: 200px;
+  max-height: 200px;
   background-color: #e0f2f1;
   padding: 10px;
-  align-self: flex-start;
   overflow-y: scroll;
+  flex-basis: 70%;
+  text-align: justify;
 }
 .book-card .favorites-div {
   position: absolute;
@@ -242,19 +247,20 @@ body {
   font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 200, "opsz" 48;
 }
 .book-card .book-comments-section {
+  justify-self: flex-end;
+  flex-grow: 1;
   overflow-y: scroll;
-  min-height: auto;
-  max-height: 220px;
+  height: 200px;
+  max-height: 200px;
   width: 100%;
-  background-color: white;
   padding-bottom: 20px;
-  margin: 10px 0 10px;
-  border-top: 1px solid #e67373;
+  border-top: 1px solid #b2dfdb;
 }
 .book-card .book-comments-section header {
   padding: 10px;
   display: flex;
   justify-content: space-around;
+  background-color: #b2dfdb;
 }
 .book-card .book-comments-section header .book-comments-section-title {
   flex-grow: 1;
@@ -277,14 +283,21 @@ body {
   display: flex;
   flex-direction: column;
 }
+.book-card .book-comments-section .book-comments.no-comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.book-card .book-comments-section .book-comments.no-comments p {
+  margin-top: 40px;
+}
 .book-card .book-comments-section .book-comments h4 {
   margin-bottom: 5px;
 }
 .book-card .book-comments-section .book-comments .comment {
-  margin: 10px 0;
   padding: 10px;
   text-align: justify;
-  border-top: 1px dotted #e67373;
+  border-top: 1px dotted #00897b;
 }
 .book-card .book-comments-section .book-comments .comment h4.comment-title {
   font-weight: bold;

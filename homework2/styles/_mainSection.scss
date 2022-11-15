@@ -43,7 +43,6 @@
 		span.filled-star {
 			color: white;
             font-variation-settings: $icon-filled
-            
 		}
 	}
 	.mask {
@@ -72,7 +71,7 @@
 			flex-grow: 1;
 			padding: 0 15px;
 			border-radius: 10px;
-			border: 1px solid $green-border-color;
+			border: 1px solid $green-submit-color;
 		}
 		input[type="submit"] {
 			min-width: 100px;
@@ -84,7 +83,7 @@
 			text-transform: uppercase;
 			cursor: pointer;
 			background-color: $green-submit-color;
-			border: 1px solid $green-border-color;
+			border: 1px solid $green-submit-color;
 			color: #001c18;
 			&:hover {
 				transform: scale(1.05);

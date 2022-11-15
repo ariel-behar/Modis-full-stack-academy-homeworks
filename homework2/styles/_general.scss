@@ -6,7 +6,6 @@ $green-success-color: #087f23;
 $light-blue-edit-color: #42a5f5;
 $dark-blue-add-color: #0077c2;
 $red-danger-color: #f44336;
-$green-border-color: #e67373;
 $green-submit-color: #00897b;
 $green-box-shadow-color: #b2dfdb;
 $green-background-color: #e0f2f1;
@@ -45,11 +44,11 @@ h3 {
 }
 
 h4 {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 }
 
 h5 {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 
 h6 {
@@ -63,11 +62,6 @@ label, input[type="text"], p, textarea {
 input[type="submit"], button {
 	font-size: 0.8rem;
 }
-
-// span.material-symbols-outlined {
-// 	// font-size: 1rem;
-// }
-
 
 body {
 	width: 100%;
