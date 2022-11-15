@@ -8,11 +8,11 @@
 	// Need to change to 0
 
 	transition: opacity 1s ease-in-out 0.7s;
-	.search-results-heading {
+	.search-results-term {
 		margin-bottom: 50px;
 		span {
 			font-weight: bold;
-			font-size: 2.5rem;
+			font-size: 1.5rem;
 		}
 	}
 	.search-results {
@@ -42,11 +42,9 @@
 		flex-basis: 50%;
 		align-self: flex-start;
 		.book-title {
-			font-size: 2rem;
 			font-weight: bold;
 		}
 		.book-author {
-			font-size: 1.7rem;
 			font-style: italic;
 		}
 	}
@@ -62,7 +60,6 @@
 		max-height: 150px;
 		min-width: 100%;
 		background-color: $green-background-color;
-		font-size: 1.6rem;
 		padding: 10px;
 		align-self: flex-start;
 		overflow-y: scroll;
@@ -78,7 +75,6 @@
 		background-color: $green-background-color;
 		box-shadow: 3px 3px 10px $green-box-shadow-color;
 		border: 1px solid $green-box-shadow-color;
-		font-size: 2.1rem;
 		font-weight: bold;
 		cursor: pointer;
 		p {
@@ -95,7 +91,6 @@
 		}
 		span.material-symbols-outlined {
 			margin-left: 5px;
-			font-size: 2rem;
 			font-variation-settings: $icon-not-filled;
 		}
 		span.material-symbols-outlined.filled-star {
@@ -119,7 +114,6 @@
 
 			.book-comments-section-title {
 				flex-grow: 1;
-				font-size: 2.3rem;
 				font-weight: 400;
 				text-align: center;
 				
@@ -132,7 +126,6 @@
 				min-width: 100px;
 				border: none;
 				
-				font-size: 1.4rem;
 				cursor: pointer;
 				&:hover {
 					transform: scale(1.05);
@@ -145,7 +138,6 @@
 			display: flex;
 			flex-direction: column;
 			h4 {
-				font-size: 1.6rem;
 				margin-bottom: 5px;
 			}
 			.comment {
@@ -157,7 +149,6 @@
 					font-weight: bold;
 				}
 				.comment-content {
-					font-size: 1.5rem;
 					margin-bottom: 10px;
 				}
 				.comment-buttons {
@@ -169,7 +160,6 @@
 						min-width: 100px;
 						border: none;
 						color: white;
-						font-size: 1.4rem;
 						cursor: pointer;
 						&:hover {
 							transform: scale(1.05);

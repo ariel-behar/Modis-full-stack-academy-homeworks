@@ -1,4 +1,31 @@
 {
-  "favorite-books": [],
-  "comments": []
+  "favorite-books": [
+    {
+      "id": 1668490467315,
+      "googleBookId": "N2USBQAAQBAJ",
+      "title": "The ASD Workbook",
+      "author": "Penny Kershaw",
+      "imageUrl": "http://books.google.com/books/content?id=N2USBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "description": "This workbook helps parents to explain ASDs to their child and provide practical and emotional support following diagnosis. It is presented in a clear and positive way. As the workbook is completed an invaluable record of development will be created for parent and child to look back on together.",
+      "comments": []
+    },
+    {
+      "id": 1668490643757,
+      "googleBookId": "RQpJAQAAMAAJ",
+      "title": "Rezultati ot pri︠e︡broi︠a︡vane na naselenieto v t︠s︡arstvo Bŭlgarii︠a︡ na 31 dekemvriĭ 1905 g.",
+      "author": "author unknown",
+      "imageUrl": "http://books.google.com/books/content?id=RQpJAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "",
+      "comments": []
+    }
+  ],
+  "comments": [
+    {
+      "id": 1668491801897,
+      "bookId": "1668490643757",
+      "title": "adsadsads",
+      "content": "asasdasd",
+      "createdAt": "Tue Nov 15 2022 07:56:41 GMT+0200 (Eastern European Standard Time)"
+    }
+  ]
 }

@@ -27,9 +27,48 @@ $icon-not-filled: 'FILL' 0, 'wght' 800, 'GRAD' 200, 'opsz' 48;
 	font-weight: lighter;
 	color: #001c18;
 }
+
 html {
-	font-size: 12px;
+	font-size: 20px;
 }
+
+h1 {
+	font-size: 4.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.3rem;
+}
+
+h5 {
+	font-size: 1.2rem;
+}
+
+h6 {
+	font-size: 1.1rem;
+}
+
+label, input[type="text"], p, textarea {
+	font-size: 1rem;
+}
+
+input[type="submit"], button {
+	font-size: 0.8rem;
+}
+
+// span.material-symbols-outlined {
+// 	// font-size: 1rem;
+// }
+
+
 body {
 	width: 100%;
 	min-height: 100vh;

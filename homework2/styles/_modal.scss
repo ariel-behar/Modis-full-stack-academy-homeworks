@@ -12,7 +12,6 @@
 
     h3 {
         color: white;
-        font-size: 3rem;
     }
 
     .modal-exit-button {
@@ -20,13 +19,10 @@
         position: absolute;
 		top: 50px;
 		right: 50px;
-		font-size: 2rem;
 
         cursor: pointer;
-
 		span {
 			color: white;
-            
 		}
     }
 
@@ -39,11 +35,9 @@
         label {
             color: white;
             margin: 20px 0 5px 0;
-            font-size: 1.5rem;
         }
 
         input[type="text"], textarea {
-            font-size: 1.5rem;
             padding: 10px;
         }
 
@@ -57,7 +51,6 @@
             margin: 20px auto 0;
             border: 1px solid white;
 
-            font-size: 1.5rem;
             cursor: pointer;
             &:hover {
                 transform: scale(1.05);
@@ -76,7 +69,6 @@
         }
         p, span {
             color: white;
-            font-size: 2.5rem;
             cursor: pointer;
         }
     }

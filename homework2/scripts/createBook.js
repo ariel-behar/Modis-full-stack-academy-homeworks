@@ -11,12 +11,12 @@ export default async function createBook(book, googleBookId, isFavorite) {
         comments = book.comments[0]
     }
     
-    let commentsResult = comments != undefined && comments.length > 0 ? generateComments(comments) : `<h4>There are no comments for this book... Yet :)</h4>`
+    let commentsResult = comments != undefined && comments.length > 0 ? generateComments(comments) : `<p>There are no comments for this book... Yet :)</p>`
 
     let commentsSection = isFavorite 
         ? ` <div class="book-comments-section"> 
             <header>
-                <h3 class="book-comments-section-title">Comments</h3>
+                <h5 class="book-comments-section-title">Comments</h5>
                 <button name="add-comment">Add Comment</button>
             </header>
             <div class="book-comments">
@@ -33,11 +33,11 @@ export default async function createBook(book, googleBookId, isFavorite) {
 
         bookCard.innerHTML = `
             <div class="favorites-div">
-                <p class="add-remove-to-from-favorites-par">${ addRemoveHTMLString } </p>
+                <h5 class="add-remove-to-from-favorites-par">${ addRemoveHTMLString } </h5>
             </div>
             <header class="book-heading">
-                <h3 class="book-title">${book.title}</h3>
-                <h4 class="book-author">by <span>${book.authors ? `${book.authors.join(' & ')}` : 'author unknown'}</span></h4>
+                <h4 class="book-title">${book.title}</h4>
+                <h5 class="book-author">by <span>${book.authors ? `${book.authors.join(' & ')}` : 'author unknown'}</span></h5>
             </header>
             <img class="book-image" src="${ book.imageLinks?.thumbnail ? book.imageLinks.thumbnail : book.imageUrl}">
             <p class="book-description">${book.description ? book.description : ''}</p>

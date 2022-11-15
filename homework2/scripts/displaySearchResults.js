@@ -7,7 +7,7 @@ let searchResultsDiv = document.querySelector('#search-results-section .search-r
 export default async function displaySearchResults(books, searchTerm) {
     clearSearchResultsSection()
 
-    document.querySelector('#search-results-section .search-results-heading span').textContent = searchTerm;
+    document.querySelector('#search-results-section .search-results-term span').textContent = searchTerm;
 
     if(books) {
         if(searchTerm == 'Favorites') {
