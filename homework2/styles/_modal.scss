@@ -63,8 +63,16 @@
         justify-content: space-around;
         margin-top: 30px;
         p {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+
             &:hover {
                 transform: scale(1.1);
+            }
+            span {
+                margin-left: 10px;
             }
         }
         p, span {

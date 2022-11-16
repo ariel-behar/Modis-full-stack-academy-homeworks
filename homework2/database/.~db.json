@@ -98,15 +98,6 @@
       "imageUrl": "http://books.google.com/books/content?id=duoMBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "description": "This cutting-edge resource provides a comprehensive review of available assessment tools for Autism Spectrum Disorder (ASD), presenting up-to-date evidence for their efficacy as well as best practice for selecting appropriate forms of assessment across the lifespan. Gathering together the latest international research evidence, Kenneth J. Aitken provides a clear evaluation of the commonly used assessment measures, and examines other tools not yet validated for ASD assessment but which are likely to have promising applications for the field. The tools covered include those relating to core assessment areas, such as cognitive ability, communication, motor skills and executive function, as well as supplementary and emerging areas of assessment, such as behaviour and attention, sensory issues, anxiety and depression, friendships and loneliness, and internet safety. This pioneering report will be an indispensable primary reference for researchers, academics, clinicians, service providers and commissioners.",
       "comments": []
-    },
-    {
-      "id": 1668530970221,
-      "googleBookId": "X_3eCwAAQBAJ",
-      "title": "A Guide to Counseling Individuals with Autism Spectrum Disorders (ASD)",
-      "author": "Albert J. Cotugno",
-      "imageUrl": "http://books.google.com/books/content?id=X_3eCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "Autism Spectrum Disorders (ASD) are a complex set of neurodevelopmental disorders with which one in sixty-eight children in the United States have been diagnosed. However, their causes are still unclear and there are no known cures. Effective, evidence-based treatments are emerging, but they are primarily school and behavior-based. There is an ongoing need to understand and implement techniques and interventions that can address and change social communication and interaction deficiencies for people diagnosed with ASD. A Guide to Counseling Individuals with Autism Spectrum Disorders is the third of three books on therapeutic issues specific to individuals with ASD. The first two books outline a theoretical approach and a practical intervention program named Social Competence Enhancement Program (SCEP). They primarily address group interventions and techniques. A Guide to Counseling Individuals with Autism Spectrum Disorders applies the SCEP approach to individual therapeutic work. By considering the useful and evidence-supported elements of interventions for individuals with ASD and applying them within the individual psychotherapy process, this book suggests ways to help people with ASD achieve a higher quality of life, by addressing and reducing the experience of internal distress; by understanding its sources; and by teaching clients to take control and make appropriate and adaptive changes. Vignettes from actual clinical situations are used to demonstrate particular issues that arise and to illustrate how to employ interventions found useful with individuals with ASD....",
-      "comments": []
     }
   ],
   "comments": [
@@ -116,6 +107,20 @@
       "title": "adsadsads",
       "content": "asasdasd",
       "createdAt": "Tue Nov 15 2022 07:56:41 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": 1668577338483,
+      "bookId": "1668490643757",
+      "title": "sdaadsads",
+      "content": "asdasdsadsad",
+      "createdAt": "Wed Nov 16 2022 07:42:18 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": 1668583881630,
+      "bookId": "1668490467315",
+      "title": "dassdasadsda",
+      "content": "sdasdasadsad",
+      "createdAt": "Wed Nov 16 2022 09:31:21 GMT+0200 (Eastern European Standard Time)"
     }
   ]
 }

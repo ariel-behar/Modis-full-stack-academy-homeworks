@@ -61,6 +61,22 @@ export default function displayFavorites() {
                                 displayFavorites();
                             })
                         })
+
+                        document.querySelectorAll('.hide-expand-comments').forEach(btn => {
+                            btn.addEventListener('click', (e) => {
+                                let currentCommentSection = e.currentTarget.parentElement.parentElement.children[1];
+                                console.log('currentCommentSection:', currentCommentSection)
+
+                                if(currentCommentSection.style.display == '') {
+                                    currentCommentSection.style.display = 'flex';
+                                } else if(currentCommentSection.style.display == 'none'){
+                                    currentCommentSection.style.display = 'flex';
+                                } else {
+                                    currentCommentSection.style.display = 'none';
+                                }
+                                
+                            })
+                        })
                     })
             } else {
                 displaySearchResults(false, 'Favorites')

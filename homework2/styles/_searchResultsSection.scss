@@ -18,6 +18,7 @@
 	.search-results {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: flex-start;
 		gap: 50px;
 	}
 }
@@ -117,61 +118,88 @@
 	.book-comments-section {
 		justify-self: flex-end;
 		flex-grow: 1;
-		overflow-y: scroll;
-		height: 200px;
-		max-height: 200px;
+		
+		height: auto;
+		max-height: 250px;
 		width: 100%;
-		padding-bottom: 20px;
 		border-top: 1px solid $green-box-shadow-color;
 
-
 		header {
+			background-color: $green-box-shadow-color;
 			padding: 10px;
+
 			display: flex;
 			justify-content: space-around;
-			background-color: $green-box-shadow-color;
-
+			align-items: flex-end;
 
 			.book-comments-section-title {
 				flex-grow: 1;
 				font-weight: 400;
 				text-align: center;
-				
 			}
 
-			button[name="add-comment"] {
-				background-color: $dark-blue-add-color;
-				color: white;
-				min-height: 28px;
-				min-width: 100px;
-				border: none;
-				
+			.hide-expand-comments {
+				position: absolute;
+    			right: 15px;
 				cursor: pointer;
-				&:hover {
-					transform: scale(1.05);
-					box-shadow: 3px 3px 5px $green-box-shadow-color;
+
+				&:hover{
+					transform: scale(1.1);
 				}
 			}
 		}
 		
 		.book-comments {
-			display: flex;
+			display: none;
 			flex-direction: column;
+			overflow-y: scroll;
+			height: 198px;
 			&.no-comments {
-				display: flex;
-				justify-content: center;
-				align-items: center;
 				p {
 					margin-top: 40px;
+					text-align: center;
 				}
 			}
 			h4 {
 				margin-bottom: 5px;
 			}
+
+			button[name="add-comment"] {
+				align-self: flex-end;
+				margin: 10px 10px 0 0;
+
+				background-color: $dark-blue-add-color;
+				color: white;
+				min-height: 28px;
+				min-width: 120px;
+				max-width: 150px;
+				padding: 0 15px;
+				border: none;
+				
+				cursor: pointer;
+
+				display: flex;
+				justify-content: center;
+				align-content: center;
+				align-items: center;
+				&:hover {
+					transform: scale(1.05);
+					box-shadow: 3px 3px 5px $green-box-shadow-color;
+				}
+
+				span {
+					color: white;
+					margin-left: 10px;
+				}
+			}
 			.comment {
-				padding: 10px;
+				padding: 15px;
 				text-align: justify;
-				border-top: 1px dotted $green-submit-color;
+				border: 1px dotted $green-submit-color;
+
+				background-color: white;;
+				border-radius: 20px;
+				margin: 10px;
 
 				h4.comment-title {
 					font-weight: bold;
@@ -189,9 +217,19 @@
 						border: none;
 						color: white;
 						cursor: pointer;
+
+						display: flex;
+						justify-content: center;
+						align-content: center;
+						align-items: center;
+
 						&:hover {
 							transform: scale(1.05);
 							box-shadow: 3px 3px 5px $green-box-shadow-color;
+						}
+						span {
+							color: white;
+							margin-left: 10px;
 						}
 					}
 					button[name="edit-comment"] {

@@ -19,9 +19,10 @@ export default async function createBook(book, googleBookId, isFavorite) {
         ? ` <div class="book-comments-section"> 
             <header>
                 <h5 class="book-comments-section-title">Comments</h5>
-                <button name="add-comment">Add Comment</button>
+                <p class="hide-expand-comments"></span> <span class="material-symbols-outlined">expand_content</span></button>
             </header>
             <div class="book-comments ${noCommentsClass}">
+                <button name="add-comment">Add Comment </span> <span class="material-symbols-outlined">add</span></button>
                 ${ commentsResult }
             </div>
         </div>` 
@@ -35,7 +36,7 @@ export default async function createBook(book, googleBookId, isFavorite) {
 
         bookCard.innerHTML = `
             <div class="favorites-div">
-                <h5 class="add-remove-to-from-favorites-par">${ addRemoveHTMLString } </h5>
+                <h4 class="add-remove-to-from-favorites-par">${ addRemoveHTMLString } </h4>
             </div>
             <header class="book-heading">
                 <h4 class="book-title">${book.title}</h4>

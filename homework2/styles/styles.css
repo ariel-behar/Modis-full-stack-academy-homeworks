@@ -163,6 +163,7 @@ body {
 #search-results-section .search-results {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: 50px;
 }
 
@@ -249,55 +250,75 @@ body {
 .book-card .book-comments-section {
   justify-self: flex-end;
   flex-grow: 1;
-  overflow-y: scroll;
-  height: 200px;
-  max-height: 200px;
+  height: auto;
+  max-height: 250px;
   width: 100%;
-  padding-bottom: 20px;
   border-top: 1px solid #b2dfdb;
 }
 .book-card .book-comments-section header {
+  background-color: #b2dfdb;
   padding: 10px;
   display: flex;
   justify-content: space-around;
-  background-color: #b2dfdb;
+  align-items: flex-end;
 }
 .book-card .book-comments-section header .book-comments-section-title {
   flex-grow: 1;
   font-weight: 400;
   text-align: center;
 }
-.book-card .book-comments-section header button[name=add-comment] {
-  background-color: #0077c2;
-  color: white;
-  min-height: 28px;
-  min-width: 100px;
-  border: none;
+.book-card .book-comments-section header .hide-expand-comments {
+  position: absolute;
+  right: 15px;
   cursor: pointer;
 }
-.book-card .book-comments-section header button[name=add-comment]:hover {
-  transform: scale(1.05);
-  box-shadow: 3px 3px 5px #b2dfdb;
+.book-card .book-comments-section header .hide-expand-comments:hover {
+  transform: scale(1.1);
 }
 .book-card .book-comments-section .book-comments {
-  display: flex;
+  display: none;
   flex-direction: column;
-}
-.book-card .book-comments-section .book-comments.no-comments {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow-y: scroll;
+  height: 198px;
 }
 .book-card .book-comments-section .book-comments.no-comments p {
   margin-top: 40px;
+  text-align: center;
 }
 .book-card .book-comments-section .book-comments h4 {
   margin-bottom: 5px;
 }
+.book-card .book-comments-section .book-comments button[name=add-comment] {
+  align-self: flex-end;
+  margin: 10px 10px 0 0;
+  background-color: #0077c2;
+  color: white;
+  min-height: 28px;
+  min-width: 120px;
+  max-width: 150px;
+  padding: 0 15px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.book-card .book-comments-section .book-comments button[name=add-comment]:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 5px #b2dfdb;
+}
+.book-card .book-comments-section .book-comments button[name=add-comment] span {
+  color: white;
+  margin-left: 10px;
+}
 .book-card .book-comments-section .book-comments .comment {
-  padding: 10px;
+  padding: 15px;
   text-align: justify;
-  border-top: 1px dotted #00897b;
+  border: 1px dotted #00897b;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
 }
 .book-card .book-comments-section .book-comments .comment h4.comment-title {
   font-weight: bold;
@@ -316,10 +337,18 @@ body {
   border: none;
   color: white;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .book-card .book-comments-section .book-comments .comment .comment-buttons button:hover {
   transform: scale(1.05);
   box-shadow: 3px 3px 5px #b2dfdb;
+}
+.book-card .book-comments-section .book-comments .comment .comment-buttons button span {
+  color: white;
+  margin-left: 10px;
 }
 .book-card .book-comments-section .book-comments .comment .comment-buttons button[name=edit-comment] {
   background-color: #42a5f5;
@@ -385,8 +414,17 @@ body {
   justify-content: space-around;
   margin-top: 30px;
 }
+.modal .modal-buttons p {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
 .modal .modal-buttons p:hover {
   transform: scale(1.1);
+}
+.modal .modal-buttons p span {
+  margin-left: 10px;
 }
 .modal .modal-buttons p, .modal .modal-buttons span {
   color: white;
