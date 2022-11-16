@@ -1,33 +1,6 @@
 {
   "favorite-books": [
     {
-      "id": 1668490467315,
-      "googleBookId": "N2USBQAAQBAJ",
-      "title": "The ASD Workbook",
-      "author": "Penny Kershaw",
-      "imageUrl": "http://books.google.com/books/content?id=N2USBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "This workbook helps parents to explain ASDs to their child and provide practical and emotional support following diagnosis. It is presented in a clear and positive way. As the workbook is completed an invaluable record of development will be created for parent and child to look back on together.",
-      "comments": []
-    },
-    {
-      "id": 1668490643757,
-      "googleBookId": "RQpJAQAAMAAJ",
-      "title": "Rezultati ot pri︠e︡broi︠a︡vane na naselenieto v t︠s︡arstvo Bŭlgarii︠a︡ na 31 dekemvriĭ 1905 g.",
-      "author": "author unknown",
-      "imageUrl": "http://books.google.com/books/content?id=RQpJAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "description": "",
-      "comments": []
-    },
-    {
-      "id": 1668494296705,
-      "googleBookId": "xEApjgEACAAJ",
-      "title": "React.Js Essentials",
-      "author": "Artemij Fedosejev",
-      "imageUrl": "http://books.google.com/books/content?id=xEApjgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "description": "A fast-paced guide to designing and building scalable and maintainable web apps with React.jsAbout This Book• Build maintainable and performant user interfaces for your web applications using React.js• Create reusable React.js components to save time and effort in maintaining your user interfaces• Learn how to build a ready-to-deploy React.js web application, following our step-by-step tutorialWho This Book Is ForIf you're a front-end developer with knowledge of jQuery and its libraries, along with frameworks, such as Angular.JS and Backbone.JS, or native JavaScript development, and you wish to use the fastest web user interface library there is, then this book is ideal for you.What You Will Learn• Install powerful React.js tools to make development much more efficient• Create React elements with properties and children• Get started with stateless and stateful React components• Use JSX to speed up your React.js development process• Add reactivity to your React components with lifecycle methods• Integrate your React components with other JavaScript libraries• Utilize the Flux application architecture with your React components• Test your React components with Jest test frameworkIn DetailBuilding web applications with maintainable and performant user interfaces is a challenge that many have faced for more than a decade, but no one has risen to this challenge quite like React.js. Today React.js is used by Facebook, Instagram, Khan Academy, and Imperial College London, to name a few. Many new users recognize the benefits of React.js and adopt it in their own projects, forming a fast-growing community. The speed at which React.js has evolved promises a bright future for those who invest in learning it today.React.js Essentials will take you on a fast-paced journey through building your own maintainable React.js application. Begin by exploring how you can create single and multiple user interface elements. Create stateless and stateful components and make them reactive, learn to interact between your components and lifecycle methods and gauge how to effectively integrate your user interface components with other JavaScript libraries. Delve deep into the core elements of the Flux architecture and learn how to manage your application using stores. Finish by going that extra mile with the Jest test framework, running multiple tests on your application and find solutions to scale it further without complexity.Style and approachThe book adopts a step-by-step, hands-on approach with ample codes to ensure you learn React.js at a fast pace.",
-      "comments": []
-    },
-    {
       "id": 1668530957635,
       "googleBookId": "FQrlAAAAMAAJ",
       "title": "AIAA 92-4519 - AIAA 92-4671",
@@ -107,30 +80,31 @@
       "imageUrl": "http://books.google.com/books/content?id=RRLmDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "description": "LAST UPDATE: 28. September 2022 If you are looking for a comprehensive and pragmatic yet concise and up-to-date React.js feat. Hooks book, the Road to React is for you. What you will learn. In \"The Road to React\" you will learn about all the fundamentals of React.js with Hooks while building a full-blown React application step by step. While you create the React application, every chapter will introduce you to a new React key feature. However, there is more than only the fundamentals: The book dives into related topics (e.g. React with TypeScript, Testing, Performance Optimizations) and advanced feature implementations like client- and server-side searching. At the end of the book, you will have a fully working deployed React application. Is it up to date? Programming books are usually outdated soon after their release, but since this book is self- published, I can update it as needed whenever a new version of something related to this book gets released. I am a beginner. Is this book for me? Yes. The book starts from zero and takes you through the learning experience step by step. Every chapter builds up on the learnings from the previous chapter. In addition, at the end of every chapter, exercises fortify your lessons learned. If you got stuck in a chapter, you will always find a reference URL to the status quo of the actual code. Core Concepts Pragmatic: Master React while building a complete application step by step. Problems Solving: You need to experience a problem first before solving it. The Why: Readers like how the book answers the Why, not only the How. Table of Contents Fundamentals of React Hello React Requirements Setting up a React Project Meet the React Component React JSX Lists in React Meet another React Component React Component Instantiation ReactDOM React Component Definition (Advanced) Handler Function in JSX React Props React State Callback Handlers in JSX Lifting State in React React Controlled Components Props Handling (Advanced) React Side-Effects React Custom Hooks (Advanced) React Fragments Reusable React Component React Component Composition Imperative React Inline Handler in JSX React Asynchronous Data React Conditional Rendering React Advanced State React Impossible States Data Fetching with React Data Re-Fetching in React Memoized Handler in React (Advanced) Explicit Data Fetching with React Third-Party Libraries in React Async/Await in React (Advanced) Forms in React React's Legacy React Class Components React Class Components: State Imperative React Styling in React CSS in React CSS Modules in React Styled Components in React SVGs in React React Maintenance Performance in React (Advanced) TypeScript in React Unit Testing to Integration Testing React Project Structure Real World React (Advanced) Sorting Reverse Sort Remember Last Searches Paginated Fetch Deploying a React Application Build Process Deploy to Firebase",
       "comments": []
+    },
+    {
+      "id": 1668589952848,
+      "googleBookId": "N2USBQAAQBAJ",
+      "title": "The ASD Workbook",
+      "author": "Penny Kershaw",
+      "imageUrl": "http://books.google.com/books/content?id=N2USBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "description": "This workbook helps parents to explain ASDs to their child and provide practical and emotional support following diagnosis. It is presented in a clear and positive way. As the workbook is completed an invaluable record of development will be created for parent and child to look back on together.",
+      "comments": []
     }
   ],
   "comments": [
     {
-      "id": 1668577338483,
-      "bookId": "1668490643757",
-      "title": "sdaadsads",
-      "content": "asdasdsadsad",
-      "createdAt": "Wed Nov 16 2022 07:42:18 GMT+0200 (Eastern European Standard Time)"
+      "id": 1668590228871,
+      "bookId": "1668530957635",
+      "title": "asdsda",
+      "content": "sasda",
+      "createdAt": "Wed Nov 16 2022 11:17:08 GMT+0200 (Eastern European Standard Time)"
     },
     {
-      "id": 1668583881630,
-      "bookId": "1668490467315",
-      "title": "dassdasadsda",
-      "content": "sdasdasadsad",
-      "createdAt": "Wed Nov 16 2022 09:31:21 GMT+0200 (Eastern European Standard Time)"
-    },
-    {
-      "id": 1668584217112,
-      "bookId": "1668494296705",
-      "title": "try",
-      "content": "asasd",
-      "createdAt": "Wed Nov 16 2022 09:36:57 GMT+0200 (Eastern European Standard Time)",
-      "modifiedAt": "Wed Nov 16 2022 09:37:05 GMT+0200 (Eastern European Standard Time)"
+      "id": 1668590234923,
+      "bookId": "1668530957635",
+      "title": "ads",
+      "content": "assd",
+      "createdAt": "Wed Nov 16 2022 11:17:14 GMT+0200 (Eastern European Standard Time)"
     }
   ]
 }

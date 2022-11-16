@@ -22,12 +22,13 @@
 		display: none;
 		opacity: 0;
 		transition: opacity 1s ease-in-out;
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		cursor: pointer;
+
 		span {
-			cursor: pointer;
 			color: white;
-			position: absolute;
-			top: 50px;
-			left: 50px;
 			font-size: 1.5rem;
 			font-variation-settings: $icon-filled;
 			text-shadow: $dark-text-shadow;
@@ -39,10 +40,14 @@
 		position: absolute;
 		top: 50px;
 		right: 50px;
+		z-index: 150;
+		text-shadow: $dark-text-shadow;
+		display: flex;
 		
 		span.filled-star {
 			color: white;
-            font-variation-settings: $icon-filled
+            font-variation-settings: $icon-filled;
+			text-shadow: $dark-text-shadow;
 		}
 	}
 	.mask {

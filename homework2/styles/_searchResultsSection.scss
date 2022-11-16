@@ -87,15 +87,17 @@
 		left: 50%;
 		top: -22.5px;
 		transform: translate(-50%, 0);
-		min-width: 60%;
+		min-width: 70%;
 		text-align: center;
-		padding: 0 30px;
 		background-color: $green-background-color;
 		box-shadow: 3px 3px 10px $green-box-shadow-color;
 		border: 1px solid $green-box-shadow-color;
 		font-weight: bold;
 		cursor: pointer;
-		p {
+		.add-remove-to-from-favorites-par {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			&:hover {
 				transform: scale(1.05);
 				transition: transform 0.2s ease-in-out;
@@ -103,6 +105,7 @@
 		}
 		span.add-to-favorites {
 			color: $green-success-color;
+
 		}
 		span.remove-from-favorites {
 			color: $red-danger-color;
