@@ -98,16 +98,18 @@
       "imageUrl": "http://books.google.com/books/content?id=duoMBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "description": "This cutting-edge resource provides a comprehensive review of available assessment tools for Autism Spectrum Disorder (ASD), presenting up-to-date evidence for their efficacy as well as best practice for selecting appropriate forms of assessment across the lifespan. Gathering together the latest international research evidence, Kenneth J. Aitken provides a clear evaluation of the commonly used assessment measures, and examines other tools not yet validated for ASD assessment but which are likely to have promising applications for the field. The tools covered include those relating to core assessment areas, such as cognitive ability, communication, motor skills and executive function, as well as supplementary and emerging areas of assessment, such as behaviour and attention, sensory issues, anxiety and depression, friendships and loneliness, and internet safety. This pioneering report will be an indispensable primary reference for researchers, academics, clinicians, service providers and commissioners.",
       "comments": []
+    },
+    {
+      "id": 1668584192495,
+      "googleBookId": "RRLmDwAAQBAJ",
+      "title": "The Road to React",
+      "author": "Robin Wieruch",
+      "imageUrl": "http://books.google.com/books/content?id=RRLmDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "description": "LAST UPDATE: 28. September 2022 If you are looking for a comprehensive and pragmatic yet concise and up-to-date React.js feat. Hooks book, the Road to React is for you. What you will learn. In \"The Road to React\" you will learn about all the fundamentals of React.js with Hooks while building a full-blown React application step by step. While you create the React application, every chapter will introduce you to a new React key feature. However, there is more than only the fundamentals: The book dives into related topics (e.g. React with TypeScript, Testing, Performance Optimizations) and advanced feature implementations like client- and server-side searching. At the end of the book, you will have a fully working deployed React application. Is it up to date? Programming books are usually outdated soon after their release, but since this book is self- published, I can update it as needed whenever a new version of something related to this book gets released. I am a beginner. Is this book for me? Yes. The book starts from zero and takes you through the learning experience step by step. Every chapter builds up on the learnings from the previous chapter. In addition, at the end of every chapter, exercises fortify your lessons learned. If you got stuck in a chapter, you will always find a reference URL to the status quo of the actual code. Core Concepts Pragmatic: Master React while building a complete application step by step. Problems Solving: You need to experience a problem first before solving it. The Why: Readers like how the book answers the Why, not only the How. Table of Contents Fundamentals of React Hello React Requirements Setting up a React Project Meet the React Component React JSX Lists in React Meet another React Component React Component Instantiation ReactDOM React Component Definition (Advanced) Handler Function in JSX React Props React State Callback Handlers in JSX Lifting State in React React Controlled Components Props Handling (Advanced) React Side-Effects React Custom Hooks (Advanced) React Fragments Reusable React Component React Component Composition Imperative React Inline Handler in JSX React Asynchronous Data React Conditional Rendering React Advanced State React Impossible States Data Fetching with React Data Re-Fetching in React Memoized Handler in React (Advanced) Explicit Data Fetching with React Third-Party Libraries in React Async/Await in React (Advanced) Forms in React React's Legacy React Class Components React Class Components: State Imperative React Styling in React CSS in React CSS Modules in React Styled Components in React SVGs in React React Maintenance Performance in React (Advanced) TypeScript in React Unit Testing to Integration Testing React Project Structure Real World React (Advanced) Sorting Reverse Sort Remember Last Searches Paginated Fetch Deploying a React Application Build Process Deploy to Firebase",
+      "comments": []
     }
   ],
   "comments": [
-    {
-      "id": 1668491801897,
-      "bookId": "1668490643757",
-      "title": "adsadsads",
-      "content": "asasdasd",
-      "createdAt": "Tue Nov 15 2022 07:56:41 GMT+0200 (Eastern European Standard Time)"
-    },
     {
       "id": 1668577338483,
       "bookId": "1668490643757",
@@ -116,18 +118,19 @@
       "createdAt": "Wed Nov 16 2022 07:42:18 GMT+0200 (Eastern European Standard Time)"
     },
     {
-      "id": 1668578342313,
-      "bookId": "1668490467315",
-      "title": "adsadsaads",
-      "content": "asdsadsadsad",
-      "createdAt": "Wed Nov 16 2022 07:59:02 GMT+0200 (Eastern European Standard Time)"
-    },
-    {
       "id": 1668583881630,
       "bookId": "1668490467315",
       "title": "dassdasadsda",
       "content": "sdasdasadsad",
       "createdAt": "Wed Nov 16 2022 09:31:21 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": 1668584217112,
+      "bookId": "1668494296705",
+      "title": "try",
+      "content": "asasd",
+      "createdAt": "Wed Nov 16 2022 09:36:57 GMT+0200 (Eastern European Standard Time)",
+      "modifiedAt": "Wed Nov 16 2022 09:37:05 GMT+0200 (Eastern European Standard Time)"
     }
   ]
 }

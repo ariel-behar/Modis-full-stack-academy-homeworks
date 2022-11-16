@@ -56,6 +56,10 @@
                 transform: scale(1.05);
             }
         }
+        .modal-form-title-feedback-message, .modal-form-content-feedback-message {
+            color: white;
+            text-align: center;
+        }
     }
     .modal-buttons {
         width: 50%;

@@ -65,7 +65,6 @@ export default function displayFavorites() {
                         document.querySelectorAll('.hide-expand-comments').forEach(btn => {
                             btn.addEventListener('click', (e) => {
                                 let currentCommentSection = e.currentTarget.parentElement.parentElement.children[1];
-                                console.log('currentCommentSection:', currentCommentSection)
 
                                 if(currentCommentSection.style.display == '') {
                                     currentCommentSection.style.display = 'flex';

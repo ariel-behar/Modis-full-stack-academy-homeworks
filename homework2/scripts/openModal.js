@@ -13,9 +13,11 @@ let modalHtmlForm = `
         <form action="" class="modal-form">
             <label for="title">Comment title:</label>
             <input type="text" name="title" id="title" placeholder="Insert title here...">
+            <p class="modal-form-title-feedback-message"></p>
 
             <label for="content">Comment content:</label>
             <textarea type="text" name="content" id="content" rows="6" placeholder="Insert content here..."></textarea>
+            <p class="modal-form-content-feedback-message"></p>
 
             <input type="submit" name="add-edit-comment" value="">
         </form>
@@ -85,27 +87,46 @@ export default function openCommentModal(bookId, commentObj, confirmationModal, 
             let modifiedAt = (new Date()).toString();
     
             let comment = new Comment(bookId, title, content);
-    
-            if(commentObj) {
-                commentServices.edit(commentObj.commentId, {title, content, modifiedAt })
-                    .then(res => res.json())
-                    .then(data => {
-                        displayFavorites()
-    
-                        body.removeChild(modal);
-                        body.style.overflow = 'scroll';
-                    })
+            
+            if(title.length <= 40 && content.length <= 256 ) {
+                if(commentObj) {
+                    commentServices.edit(commentObj.commentId, {title, content, modifiedAt })
+                        .then(res => res.json())
+                        .then(data => {
+                            displayFavorites()
+        
+                            body.removeChild(modal);
+                            body.style.overflow = 'scroll';
+                        })
+                } else {
+                    commentServices.add(comment)
+                        .then(res => res.json())
+                        .then(data => {
+                            displayFavorites()
+        
+                            body.removeChild(modal);
+                            body.style.overflow = 'scroll';
+                        })
+                        .catch(err => console.log(err))
+                }
             } else {
-                commentServices.add(comment)
-                    .then(res => res.json())
-                    .then(data => {
-                        displayFavorites()
+                if(title.length > 40) {
+                    document.querySelector('.modal-form-title-feedback-message').innerText = 'Comment title needs to be up to 40 character long.'
     
-                        body.removeChild(modal);
-                        body.style.overflow = 'scroll';
-                    })
-                    .catch(err => console.log(err))
+                    setTimeout(() => {
+                        document.querySelector('.modal-form-title-feedback-message').innerText = ''
+                    }, 3000);
+                }
+    
+                if(content.length > 256) {
+                    document.querySelector('.modal-form-content-feedback-message').innerText = 'Comment content needs to be up to 256 character long.'
+    
+                    setTimeout(() => {
+                        document.querySelector('.modal-form-content-feedback-message').innerText = ''
+                    }, 3000);
+                }
             }
+            
         })
     }
 

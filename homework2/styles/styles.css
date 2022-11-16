@@ -408,6 +408,10 @@ body {
 .modal form input[type=submit]:hover {
   transform: scale(1.05);
 }
+.modal form .modal-form-title-feedback-message, .modal form .modal-form-content-feedback-message {
+  color: white;
+  text-align: center;
+}
 .modal .modal-buttons {
   width: 50%;
   display: flex;
