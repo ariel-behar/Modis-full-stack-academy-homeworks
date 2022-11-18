@@ -1,88 +1,16 @@
 {
   "favorite-books": [
     {
-      "id": 1668530957635,
-      "googleBookId": "FQrlAAAAMAAJ",
-      "title": "AIAA 92-4519 - AIAA 92-4671",
-      "author": "author unknown",
-      "imageUrl": "http://books.google.com/books/content?id=FQrlAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "description": "",
+      "id": 1668785367950,
+      "googleBookId": "N2USBQAAQBAJ",
+      "title": "The ASD Workbook",
+      "author": "Penny Kershaw",
+      "imageUrl": "http://books.google.com/books/content?id=N2USBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "description": "This workbook helps parents to explain ASDs to their child and provide practical and emotional support following diagnosis. It is presented in a clear and positive way. As the workbook is completed an invaluable record of development will be created for parent and child to look back on together.",
       "comments": []
     },
     {
-      "id": 1668530961079,
-      "googleBookId": "xIOOAwAAQBAJ",
-      "title": "Parenting ASD Teens",
-      "author": "Andrew Schlegelmilch",
-      "imageUrl": "http://books.google.com/books/content?id=xIOOAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "This straight-talking and accessible guide for parents of teenagers on the autism spectrum provides down-to-earth advice on coping with the more difficult issues that can arise at home and school during the adolescent years. Andrew Schlegelmilch discusses common parenting challenges and offers advice drawn from his extensive experience working with teenagers with autism and their families as Head Psychologist at a college preparatory school. He offers parents professional guidance on what to do about falling grades, how to handle adolescent tantrums, how to talk about sex and sexuality with your child, how to help your child with peer relationships, how to keep your child safe online, and what to do if you suspect your child has mental health problems. Integral to the discussion is how to set realistic expectations and encourage independence in ways that work for both your child with autism and the rest of the family, as well as how to make the best use of the help professionals can offer.",
-      "comments": []
-    },
-    {
-      "id": 1668530963235,
-      "googleBookId": "h0suDwAAQBAJ",
-      "title": "Autism Spectrum Disorders (ASD) - Searching for the Biological Basis for Behavioral Symptoms and New Therapeutic Targets",
-      "author": "Benjamin Gesundheit & Joshua Rosenzweig & Yehuda Shoenfeld",
-      "imageUrl": "http://books.google.com/books/content?id=h0suDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "Autism Spectrum Disorder (ASD) is currently diagnosed based on a series of behavioral tests. The challenge for researchers is to try to uncover the biological basis for these typical behaviors in order to improve diagnosis and identify potential targets for treatment. A multidisciplinary approach is necessary in order to move forward. This includes analysis of the current animal models for ASD and their suitability, reviewing immunological, immunogenetic and epigenetic research, reassessing clinical diagnostic tools, and surveying radiological, pathological, and serological records for clues. This volume includes research from some of the leading researchers on ASD. We are hopeful that it will stimulate further dialogue and research in this challenging field.",
-      "comments": []
-    },
-    {
-      "id": 1668530963746,
-      "googleBookId": "qGCWDgAAQBAJ",
-      "title": "Evidence-Based Assessment in ASD (Autism Spectrum Disorder)",
-      "author": "Kenneth Aitken",
-      "imageUrl": "http://books.google.com/books/content?id=qGCWDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "Advocating for an increased emphasis on evidence-based practice, this book describes and analyses a wide range of available Autism Spectrum Disorder (ASD) assessment measures. The author offers guidance on how to evaluate services and programmes and how to recognise which will be most effective in different scenarios for people with differing needs. A wide range of measures are reviewed in detail, including assessments used in situations often ignored in overviews relevant to ASD, such as assessments of internet addiction, response to traumatic stress, and criminal offending risk and witness credibility. This book is an invaluable resource to professionals who support people with ASDs, including social workers and teachers, and who are under increasing pressure to reliably assess which services, programmes and therapies are effective and fit-for-purpose.",
-      "comments": []
-    },
-    {
-      "id": 1668530965203,
-      "googleBookId": "yLC5BwAAQBAJ",
-      "title": "Autism Spectrum Disorders (ASD):",
-      "author": "Padmaja Sarathy",
-      "imageUrl": "http://books.google.com/books/content?id=yLC5BwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "This six-page laminated reference guide by Padmaja Sarathy presents seven steps for maximizing academic, social, and life outcomes for children with Autism Spectrum Disorders (ASD), while minimizing the impact of some of their complex behavioral and learning characteristics. Packed with practical and proven strategies, this guide is an invaluable resource for all those who work with children with ASD, including classroom teachers, paraeducators, support staff, and parents. The environmental and instructional supports outlined in this guide are derived from sound research-based practices. When these supportive interventions are applied cohesively and implemented consistently, they provide effective personalized interventions for responding to the unique needs of children with ASD. They include Understanding Autism Spectrum Disorders Structural Supports Visual Supports Academic Supports Social Skills Supports Self-Regulation Supports Crisis Supports The guide details each of the seven steps and provides examples of interventions and techniques that teachers can put into practice immediately to improve outcomes for students with Autism Spectrum Disorders.",
-      "comments": []
-    },
-    {
-      "id": 1668530966608,
-      "googleBookId": "KsSYDwAAQBAJ",
-      "title": "The Medial Prefrontal Cortex and Integration in ASD and Typical Cognition",
-      "author": "Dorit Ben Shalom & Yoram S. Bonneh",
-      "imageUrl": "http://books.google.com/books/content?id=KsSYDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "This eBook explores within-discipline implications and and across-discipline connections of the Ben Shalom (2009) model. The 12 papers hail from psychology, neuroscience, psychiatry, philosophy, and biology.",
-      "comments": []
-    },
-    {
-      "id": 1668530967413,
-      "googleBookId": "X9rQAgAAQBAJ",
-      "title": "Children and Youth with Autism Spectrum Disorder (ASD)",
-      "author": "James K. Luiselli",
-      "imageUrl": "http://books.google.com/books/content?id=X9rQAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "Autism spectrum disorder (ASD) is a relatively new diagnostic label which reflects the variability and differentiation of symptomatology among children and youth commonly described as having autistic disorder, high-functioning autism (HFA), and Asperger's syndrome. Current best practices have emerged from decades of evidence-based research, research-to-practice translation of empirically supported procedures, and consensus-driven recommendations from multiple disciplines. As a result, practitioners have many educational and intervention choices for children and youth with ASD--what is critical is that these options are informed by empirical outcomes that have been replicated in experimental trials (group and single-case) and disseminated to professionals and researchers alike. Children and Youth with Autism Spectrum Disorder (ASD) is a state-of-the-art volume of 15 chapters across four thematic sections that reflect the current convention of viewing autism along a continuum of presenting symptoms. Skillfully edited by James K. Luiselli, sections cover diagnosis, assessment, and measurement; evidence-based practices; health and development; and additional topics such as mindful caregiving and support, CBT, and behavioral family intervention. Compiling the most up-to-date advances in approaches toward diagnosis, education, treatment, and program development, Children and Youth with Autism Spectrum Disorder (ASD) will be a valuable resource for professionals and trainees in the ASD field including psychologists, educators, therapists, behavior analysts, and similar practitioners. It is also appropriate for academic researchers and courses devoted to clinical psychology, special education, developmental disabilities, and special topics.",
-      "comments": []
-    },
-    {
-      "id": 1668530968065,
-      "googleBookId": "duoMBwAAQBAJ",
-      "title": "Evidence-Based Assessment Tools in ASD",
-      "author": "Kenneth Aitken",
-      "imageUrl": "http://books.google.com/books/content?id=duoMBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "This cutting-edge resource provides a comprehensive review of available assessment tools for Autism Spectrum Disorder (ASD), presenting up-to-date evidence for their efficacy as well as best practice for selecting appropriate forms of assessment across the lifespan. Gathering together the latest international research evidence, Kenneth J. Aitken provides a clear evaluation of the commonly used assessment measures, and examines other tools not yet validated for ASD assessment but which are likely to have promising applications for the field. The tools covered include those relating to core assessment areas, such as cognitive ability, communication, motor skills and executive function, as well as supplementary and emerging areas of assessment, such as behaviour and attention, sensory issues, anxiety and depression, friendships and loneliness, and internet safety. This pioneering report will be an indispensable primary reference for researchers, academics, clinicians, service providers and commissioners.",
-      "comments": []
-    },
-    {
-      "id": 1668584192495,
-      "googleBookId": "RRLmDwAAQBAJ",
-      "title": "The Road to React",
-      "author": "Robin Wieruch",
-      "imageUrl": "http://books.google.com/books/content?id=RRLmDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "description": "LAST UPDATE: 28. September 2022 If you are looking for a comprehensive and pragmatic yet concise and up-to-date React.js feat. Hooks book, the Road to React is for you. What you will learn. In \"The Road to React\" you will learn about all the fundamentals of React.js with Hooks while building a full-blown React application step by step. While you create the React application, every chapter will introduce you to a new React key feature. However, there is more than only the fundamentals: The book dives into related topics (e.g. React with TypeScript, Testing, Performance Optimizations) and advanced feature implementations like client- and server-side searching. At the end of the book, you will have a fully working deployed React application. Is it up to date? Programming books are usually outdated soon after their release, but since this book is self- published, I can update it as needed whenever a new version of something related to this book gets released. I am a beginner. Is this book for me? Yes. The book starts from zero and takes you through the learning experience step by step. Every chapter builds up on the learnings from the previous chapter. In addition, at the end of every chapter, exercises fortify your lessons learned. If you got stuck in a chapter, you will always find a reference URL to the status quo of the actual code. Core Concepts Pragmatic: Master React while building a complete application step by step. Problems Solving: You need to experience a problem first before solving it. The Why: Readers like how the book answers the Why, not only the How. Table of Contents Fundamentals of React Hello React Requirements Setting up a React Project Meet the React Component React JSX Lists in React Meet another React Component React Component Instantiation ReactDOM React Component Definition (Advanced) Handler Function in JSX React Props React State Callback Handlers in JSX Lifting State in React React Controlled Components Props Handling (Advanced) React Side-Effects React Custom Hooks (Advanced) React Fragments Reusable React Component React Component Composition Imperative React Inline Handler in JSX React Asynchronous Data React Conditional Rendering React Advanced State React Impossible States Data Fetching with React Data Re-Fetching in React Memoized Handler in React (Advanced) Explicit Data Fetching with React Third-Party Libraries in React Async/Await in React (Advanced) Forms in React React's Legacy React Class Components React Class Components: State Imperative React Styling in React CSS in React CSS Modules in React Styled Components in React SVGs in React React Maintenance Performance in React (Advanced) TypeScript in React Unit Testing to Integration Testing React Project Structure Real World React (Advanced) Sorting Reverse Sort Remember Last Searches Paginated Fetch Deploying a React Application Build Process Deploy to Firebase",
-      "comments": []
-    },
-    {
-      "id": 1668594517044,
+      "id": 1668785367951,
       "googleBookId": "N2USBQAAQBAJ",
       "title": "The ASD Workbook",
       "author": "Penny Kershaw",
@@ -91,13 +19,5 @@
       "comments": []
     }
   ],
-  "comments": [
-    {
-      "id": 1668594549258,
-      "bookId": "1668530957635",
-      "title": "Extend the application ",
-      "content": "asasdads",
-      "createdAt": "Wed Nov 16 2022 12:29:09 GMT+0200 (Eastern European Standard Time)"
-    }
-  ]
+  "comments": []
 }

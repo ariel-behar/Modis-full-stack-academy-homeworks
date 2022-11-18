@@ -1,0 +1,1 @@
+{"version":3,"file":"clearSearchResultsSection.js","sourceRoot":"","sources":["../../src/scripts/clearSearchResultsSection.js"],"names":[],"mappings":"AAAA,IAAI,gBAAgB,GAAG,QAAQ,CAAC,aAAa,CAAC,yCAAyC,CAAC,CAAA;AAExF,MAAM,CAAC,OAAO,UAAU,yBAAyB;IAC7C,OAAO,gBAAgB,CAAC,UAAU,EAAE;QAChC,gBAAgB,CAAC,WAAW,CAAC,gBAAgB,CAAC,SAAS,CAAC,CAAA;KAC3D;AACL,CAAC"}

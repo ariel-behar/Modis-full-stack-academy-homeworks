@@ -4,8 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "lite-server",
-    "server": "json-server --watch database/db.json --routes routes.json --port 9000"
+    "start": "concurrently --kill-others \"tsc -w\" \"lite-server\"",
+    "server": "json-server --watch dist/database/db.json --routes routes.json --port 9000"
   },
   "type": "module",
   "keywords": [],
