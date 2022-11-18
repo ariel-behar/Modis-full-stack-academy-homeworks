@@ -1,0 +1,72 @@
+@import "https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap";
+
+// VARIABLES
+// Colors
+$green-success-color: #087f23;
+$light-blue-edit-color: #42a5f5;
+$dark-blue-add-color: #0077c2;
+$red-danger-color: #f44336;
+$green-submit-color: #00897b;
+$green-box-shadow-color: #b2dfdb;
+$green-background-color: #e0f2f1;
+$green-modal-background-color: rgba(0, 105, 92,0.95);
+
+// Text Shadow
+$dark-text-shadow:rgb(2, 68, 60) 1px 0px 0px, rgb(2, 68, 60) 0.540302px 0.841471px 0px, rgb(2, 68, 60) -0.416147px 0.909297px 0px, rgb(2, 68, 60) -0.989992px 0.14112px 0px, rgb(2, 68, 60) -0.653644px -0.756802px 0px, rgb(2, 68, 60) 0.283662px -0.958924px 0px, rgb(2, 68, 60) 0.96017px -0.279415px 0px;
+
+// ICONS
+$icon-filled: 'FILL' 1, 'wght' 800, 'GRAD' 200, 'opsz' 48;
+$icon-not-filled: 'FILL' 0, 'wght' 800, 'GRAD' 200, 'opsz' 48;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-rif;
+	font-weight: lighter;
+	color: #001c18;
+}
+
+html {
+	font-size: 20px;
+}
+
+h1 {
+	font-size: 4.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+h5 {
+	font-size: 1.1rem;
+}
+
+h6 {
+	font-size: 1.1rem;
+}
+
+label, input[type="text"], p, textarea {
+	font-size: 1rem;
+}
+
+input[type="submit"], button {
+	font-size: 0.8rem;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+}

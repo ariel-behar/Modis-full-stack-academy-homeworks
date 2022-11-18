@@ -1,0 +1,250 @@
+#search-results-section {
+	margin-top: 30vh;
+	width: 100%;
+	padding: 50px;
+	
+	// Need to change to 0
+	opacity: 1;
+	// Need to change to 0
+
+	transition: opacity 1s ease-in-out 0.7s;
+	.search-results-term {
+		margin-bottom: 50px;
+		span {
+			font-weight: bold;
+			font-size: 1.5rem;
+		}
+	}
+	.search-results {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		gap: 50px;
+	}
+}
+.book-card {
+	flex-basis: calc(33% - 30px);
+	background-color: $green-background-color;
+	box-shadow: 3px 3px 10px $green-box-shadow-color;
+	border: 1px solid $green-box-shadow-color;
+
+	position: relative;
+	height: auto;
+	max-height: 70vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	&:hover {
+		box-shadow: 7px 7px 10px $green-box-shadow-color;
+	}
+	.book-heading {
+		margin: 0 auto;
+		padding: 15px 0 10px;
+		width: 100%;
+		
+		background-color: $green-box-shadow-color;
+		text-align: center;
+
+		.book-title {
+			font-weight: bold;
+		}
+		.book-author {
+			font-style: italic;
+		}
+	}
+
+	.book-content {
+		width: 100%;
+		align-self: flex-start;
+
+		display: flex;
+		justify-content: space-between;
+
+		padding: 10px;
+
+		.book-image {
+			height: 200px;
+			align-self: flex-start;
+		}
+		.book-description {
+			margin-left: auto;
+			min-height: 200px;
+			max-height: 200px;
+			background-color: $green-background-color;
+			padding: 10px;
+	
+			overflow-y: scroll;
+	
+			flex-basis: 70%;
+			text-align: justify;
+		}
+	}
+
+	.favorites-div {
+		position: absolute;
+		left: 50%;
+		top: -22.5px;
+		transform: translate(-50%, 0);
+		min-width: 70%;
+		text-align: center;
+		background-color: $green-background-color;
+		box-shadow: 3px 3px 10px $green-box-shadow-color;
+		border: 1px solid $green-box-shadow-color;
+		font-weight: bold;
+		cursor: pointer;
+		.add-remove-to-from-favorites-par {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				transform: scale(1.05);
+				transition: transform 0.2s ease-in-out;
+			}
+		}
+		span.add-to-favorites {
+			color: $green-success-color;
+
+		}
+		span.remove-from-favorites {
+			color: $red-danger-color;
+		}
+		span.material-symbols-outlined {
+			margin-left: 5px;
+			font-variation-settings: $icon-not-filled;
+		}
+		span.material-symbols-outlined.filled-star {
+			font-variation-settings: $icon-filled;
+		}
+	}
+	.book-comments-section {
+		justify-self: flex-end;
+		flex-grow: 1;
+		
+		height: auto;
+		max-height: 250px;
+		width: 100%;
+		border-top: 1px solid $green-box-shadow-color;
+
+		header {
+			background-color: $green-box-shadow-color;
+			padding: 10px;
+
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-end;
+
+			.book-comments-section-title {
+				flex-grow: 1;
+				font-weight: 400;
+				text-align: center;
+			}
+
+			.hide-expand-comments {
+				position: absolute;
+    			right: 15px;
+				cursor: pointer;
+
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+		}
+		
+		.book-comments {
+			display: none;
+			flex-direction: column;
+			overflow-y: scroll;
+			height: 198px;
+			&.no-comments {
+				p {
+					margin-top: 40px;
+					text-align: center;
+				}
+			}
+			h4 {
+				margin-bottom: 5px;
+			}
+
+			button[name="add-comment"] {
+				align-self: flex-end;
+				margin: 10px 10px 0 0;
+
+				background-color: $dark-blue-add-color;
+				color: white;
+				min-height: 28px;
+				min-width: 120px;
+				max-width: 150px;
+				padding: 0 15px;
+				border: none;
+				
+				cursor: pointer;
+
+				display: flex;
+				justify-content: center;
+				align-content: center;
+				align-items: center;
+				&:hover {
+					transform: scale(1.05);
+					box-shadow: 3px 3px 5px $green-box-shadow-color;
+				}
+
+				span {
+					color: white;
+					margin-left: 10px;
+				}
+			}
+			.comment {
+				padding: 15px;
+				text-align: justify;
+				border: 1px dotted $green-submit-color;
+
+				background-color: white;;
+				border-radius: 20px;
+				margin: 10px;
+
+				h4.comment-title {
+					font-weight: bold;
+				}
+				.comment-content {
+					margin-bottom: 10px;
+				}
+				.comment-buttons {
+					display: flex;
+					justify-content: space-evenly;
+					button {
+						margin-top: 10px;
+						min-height: 28px;
+						min-width: 100px;
+						border: none;
+						color: white;
+						cursor: pointer;
+
+						display: flex;
+						justify-content: center;
+						align-content: center;
+						align-items: center;
+
+						&:hover {
+							transform: scale(1.05);
+							box-shadow: 3px 3px 5px $green-box-shadow-color;
+						}
+						span {
+							color: white;
+							margin-left: 10px;
+						}
+					}
+					button[name="edit-comment"] {
+						background-color: $light-blue-edit-color;
+					}
+					button[name="delete-comment"] {
+						background-color: $red-danger-color;
+					}
+				}
+				
+			}
+		}
+		
+	}
+}

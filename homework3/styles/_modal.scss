@@ -1,0 +1,87 @@
+.modal {
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    background-color: $green-modal-background-color;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        color: white;
+    }
+
+    .modal-exit-button {
+        position: absolute;
+        position: absolute;
+		top: 50px;
+		right: 50px;
+
+        cursor: pointer;
+		span {
+			color: white;
+		}
+    }
+
+    form {
+        min-width: 30%;
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            color: white;
+            margin: 20px 0 5px 0;
+        }
+
+        input[type="text"], textarea {
+            padding: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: $dark-blue-add-color;
+            color: white;
+            min-height: 28px;
+            min-width: 30%;
+            max-width: 70%;
+            border: none;
+            margin: 20px auto 0;
+            border: 1px solid white;
+
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        .modal-form-title-feedback-message, .modal-form-content-feedback-message {
+            color: white;
+            text-align: center;
+        }
+    }
+    .modal-buttons {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        p {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+            span {
+                margin-left: 10px;
+            }
+        }
+        p, span {
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
