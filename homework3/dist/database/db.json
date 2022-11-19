@@ -1,13 +1,38 @@
 {
   "favorite-books": [
     {
-      "id": 1668786127312,
-      "googleBookId": "FQrlAAAAMAAJ",
-      "title": "AIAA 92-4519 - AIAA 92-4671",
-      "imageUrl": "http://books.google.com/books/content?id=FQrlAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "description": "",
+      "id": 1668841339770,
+      "googleBookId": "ppjUtAEACAAJ",
+      "title": "Fullstack React",
+      "author": "Accomazzo Anthony & Murray Nathaniel & Ari Lerner",
+      "imageUrl": "http://books.google.com/books/content?id=ppjUtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "description": "LEARN REACT TODAY The up-to-date, in-depth, complete guide to React and friends. Become a ReactJS expert today",
+      "comments": []
+    },
+    {
+      "googleBookId": "RRLmDwAAQBAJ",
+      "title": "The Road to React",
+      "author": "Robin Wieruch",
+      "imageUrl": "http://books.google.com/books/content?id=RRLmDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "description": "LAST UPDATE: 28. September 2022 If you are looking for a comprehensive and pragmatic yet concise and up-to-date React.js feat. Hooks book, the Road to React is for you. What you will learn. In \"The Road to React\" you will learn about all the fundamentals of React.js with Hooks while building a full-blown React application step by step. While you create the React application, every chapter will introduce you to a new React key feature. However, there is more than only the fundamentals: The book dives into related topics (e.g. React with TypeScript, Testing, Performance Optimizations) and advanced feature implementations like client- and server-side searching. At the end of the book, you will have a fully working deployed React application. Is it up to date? Programming books are usually outdated soon after their release, but since this book is self- published, I can update it as needed whenever a new version of something related to this book gets released. I am a beginner. Is this book for me? Yes. The book starts from zero and takes you through the learning experience step by step. Every chapter builds up on the learnings from the previous chapter. In addition, at the end of every chapter, exercises fortify your lessons learned. If you got stuck in a chapter, you will always find a reference URL to the status quo of the actual code. Core Concepts Pragmatic: Master React while building a complete application step by step. Problems Solving: You need to experience a problem first before solving it. The Why: Readers like how the book answers the Why, not only the How. Table of Contents Fundamentals of React Hello React Requirements Setting up a React Project Meet the React Component React JSX Lists in React Meet another React Component React Component Instantiation ReactDOM React Component Definition (Advanced) Handler Function in JSX React Props React State Callback Handlers in JSX Lifting State in React React Controlled Components Props Handling (Advanced) React Side-Effects React Custom Hooks (Advanced) React Fragments Reusable React Component React Component Composition Imperative React Inline Handler in JSX React Asynchronous Data React Conditional Rendering React Advanced State React Impossible States Data Fetching with React Data Re-Fetching in React Memoized Handler in React (Advanced) Explicit Data Fetching with React Third-Party Libraries in React Async/Await in React (Advanced) Forms in React React's Legacy React Class Components React Class Components: State Imperative React Styling in React CSS in React CSS Modules in React Styled Components in React SVGs in React React Maintenance Performance in React (Advanced) TypeScript in React Unit Testing to Integration Testing React Project Structure Real World React (Advanced) Sorting Reverse Sort Remember Last Searches Paginated Fetch Deploying a React Application Build Process Deploy to Firebase",
+      "id": 1668841690822,
       "comments": []
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "bookId": "1668841339770",
+      "title": "a",
+      "content": "a",
+      "id": 1668841349464,
+      "createdAt": "Sat Nov 19 2022 09:02:29 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "bookId": "1668841690822",
+      "title": "a",
+      "content": "a",
+      "id": 1668841697346,
+      "createdAt": "Sat Nov 19 2022 09:08:17 GMT+0200 (Eastern European Standard Time)"
+    }
+  ]
 }

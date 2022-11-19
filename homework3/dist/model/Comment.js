@@ -1,9 +1,9 @@
-export default class Comment {
+export class Comment {
     constructor(bookId, title, content) {
-        this.id = (new Date()).getTime();
         this.bookId = bookId;
         this.title = title;
         this.content = content;
+        this.id = (new Date()).getTime();
         this.createdAt = (new Date()).toString();
     }
 }

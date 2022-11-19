@@ -1,4 +1,4 @@
-import Comment from '../model/Comment.js'
+import {Comment} from '../model/Comment.js'
 
 import * as commentServices from '../services/commentsServices.js'
 
@@ -87,8 +87,8 @@ export default function openCommentModal(bookId, commentObj, confirmationModal, 
             let modifiedAt = (new Date()).toString();
     
             let comment = new Comment(bookId, title, content);
-            
-            if(title.length <= 40 && content.length <= 256 ) {
+
+            if((title.length > 0 && title.length <= 40) && (content.length > 0 && content.length <= 256 )) {
                 if(commentObj) {
                     commentServices.edit(commentObj.commentId, {title, content, modifiedAt })
                         .then(res => res.json())
@@ -110,16 +110,17 @@ export default function openCommentModal(bookId, commentObj, confirmationModal, 
                         .catch(err => console.log(err))
                 }
             } else {
-                if(title.length > 40) {
-                    document.querySelector('.modal-form-title-feedback-message').innerText = 'Comment title needs to be up to 40 character long.'
+                if(title.length == 0 || title.length > 40) {
+                    console.log('here')
+                    document.querySelector('.modal-form-title-feedback-message').innerText = 'Comment title needs to be between 1 and 40 character long.'
     
                     setTimeout(() => {
                         document.querySelector('.modal-form-title-feedback-message').innerText = ''
                     }, 3000);
                 }
     
-                if(content.length > 256) {
-                    document.querySelector('.modal-form-content-feedback-message').innerText = 'Comment content needs to be up to 256 character long.'
+                if(content.length == 0 || content.length > 256) {
+                    document.querySelector('.modal-form-content-feedback-message').innerText = 'Comment content needs to be between 1 and 256 character long.'
     
                     setTimeout(() => {
                         document.querySelector('.modal-form-content-feedback-message').innerText = ''
