@@ -3,7 +3,11 @@ import Modal from '../Common/Modal/Modal'
 import JokeGenerator from '../JokeGenerator'
 import { StyledJokesSection } from './JokesSection.styled'
 
-function JokesSection() {
+type JokesSectionProps = {
+  updateComments: () => void
+}
+
+function JokesSection(props: JokesSectionProps) {
   let [leaveComment, setLeaveComment] = useState<boolean>(false)
   let [joke, setJoke] = useState<string>('')
 
@@ -24,7 +28,7 @@ function JokesSection() {
 
       {
         leaveComment
-          ? <Modal joke={joke} comment={null} />
+          ? <Modal joke={joke} comment={null} updateComments={props.updateComments}/>
           : ""
       }
 

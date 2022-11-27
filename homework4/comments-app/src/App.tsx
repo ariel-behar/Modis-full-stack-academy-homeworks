@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 
 import { StyledApp } from './App.styled';
@@ -16,15 +17,37 @@ const theme = {
 }
 
 function App() {
+	let [comments, setComments] = useState<any[]>([])
+
+	useEffect(() => {
+		try {
+			updateComments()
+		}
+		catch (err) {
+			console.log(err)
+		}
+
+	}, [comments])
+	
+	function updateComments(){
+		let storedComments: string | null = localStorage.getItem('jokeComments')
+
+		if (typeof storedComments === 'string') {
+			if(storedComments !== JSON.stringify(comments)) {
+				setComments(JSON.parse(storedComments))
+			}
+		}
+	}
+
 
 	return (
 		<ThemeProvider theme={ theme }>
 			<StyledApp className="App">
 				<HeadingSection />
 
-				<JokesSection />
+				<JokesSection updateComments={updateComments}/>
 
-				<CommentsSection />
+				<CommentsSection comments={comments} updateComments={updateComments}/>
 
 			</StyledApp>
 		</ThemeProvider>
