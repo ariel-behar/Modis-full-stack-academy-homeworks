@@ -15,7 +15,6 @@ function JokesSection() {
     else {
       setLeaveComment(false)
     }
-
   }
 
   return (

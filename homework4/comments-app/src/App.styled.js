@@ -9,6 +9,7 @@ export const StyledApp = styled.div`
 
 
     display: grid;
+    grid-template-columns: 50% 50%;
     grid-template-areas: 
         "heading heading"
         "jokes comments"

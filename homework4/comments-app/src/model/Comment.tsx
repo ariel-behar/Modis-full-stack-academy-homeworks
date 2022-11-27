@@ -8,9 +8,10 @@ export const enum CommentStatus {
 export class Comment {
     constructor(
         readonly id: IdType,
+        readonly joke: string,
         public title: string,
         public content: string,
-        public commentStatus: CommentStatus.Public,
+        public commentStatus: CommentStatus,
         readonly createdAt: Date,
         public modifiedAt?: Date
     ){}
