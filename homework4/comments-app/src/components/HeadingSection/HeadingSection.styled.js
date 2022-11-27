@@ -4,11 +4,13 @@ import imgLaughingEmojis from '../../img/laughing-emojis.jpg'
 export const StyledHeadingSection = styled.section`
     background-image: url(${imgLaughingEmojis});
     background-size: cover;
+
     width: 100%;
 
     grid-area: heading;
 
     .mask {
+        padding: 20px;
         height: 100%;
         width: 100%;
         background-color: rgba(0, 0, 0,0.5);

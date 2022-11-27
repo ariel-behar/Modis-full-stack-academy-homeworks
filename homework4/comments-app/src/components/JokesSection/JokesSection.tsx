@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import Modal from '../Common/Modal/Modal'
 import JokeGenerator from '../JokeGenerator'
-import LeaveCommentForm from '../LeaveCommentForm/LeaveCommentForm'
 import { StyledJokesSection } from './JokesSection.styled'
 
 function JokesSection() {
@@ -11,6 +11,7 @@ function JokesSection() {
     if(toggle){
       setJoke(currentJoke)
       setLeaveComment(true)
+      
     }
     else {
       setLeaveComment(false)
@@ -23,7 +24,7 @@ function JokesSection() {
 
       {
         leaveComment
-          ? <LeaveCommentForm joke={joke} />
+          ? <Modal joke={joke} comment={null} />
           : ""
       }
 

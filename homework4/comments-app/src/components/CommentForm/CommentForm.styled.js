@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledLeaveCommentFormDiv = styled.div`
+export const StyledCommentFormDiv = styled.div`
 
     form {
         display: flex;

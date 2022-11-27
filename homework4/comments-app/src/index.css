@@ -1,13 +1,18 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Patrick+Hand&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+
+  font-family: 'Kalam', cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 20px;
+}
+
+body {
+  background-image: url('./img/laughing-emojis-bg(faded).jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
