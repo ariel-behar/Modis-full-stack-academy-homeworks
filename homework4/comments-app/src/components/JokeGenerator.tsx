@@ -1,8 +1,16 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getJoke } from '../services/jokesServices';
 
-function JokeGenerator() {
+
+type JokeGeneratorProps = {
+    toggleCommentForm: (b: boolean, currentJoke: string) => void
+}
+
+
+
+function JokeGenerator({toggleCommentForm}: JokeGeneratorProps) {
     let [joke, setJoke] = useState<string>('')
+
 
     useEffect(() => {
        getJoke()
@@ -20,11 +28,13 @@ function JokeGenerator() {
             .then(res => res.json())
             .then(data => {
                 setJoke(data);
+                toggleCommentForm(false, joke)
             })
+        
     }
 
     function leaveCommentClickHandler() {
-        
+        toggleCommentForm(true, joke)
     }
 
     return (
@@ -39,6 +49,8 @@ function JokeGenerator() {
                 </>                
                 : ''
             }
+
+
         </div>
     )
 }
