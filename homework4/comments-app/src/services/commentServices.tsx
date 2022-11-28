@@ -1,4 +1,4 @@
-
+import { CommentStatus } from '../model/Comment'
 
 export const add = (newComment:object) => {
     let currentComments: null | string = localStorage.getItem('jokeComments')
@@ -40,6 +40,25 @@ export const edit = (commentId: string, commentTitle: string, commentContent: st
         localStorage.setItem('jokeComments', JSON.stringify(parsedComments))
     }
 }
+
+export const editCommentStatus = (commentId: string, commentStatus: number) => {
+    let currentComments:string | null = localStorage.getItem('jokeComments')
+
+    if(currentComments !== null) {
+        let parsedComments: object[] = JSON.parse(currentComments)
+
+        let foundComment: any = parsedComments.find((comment: any) => comment.id === commentId)
+
+        foundComment.commentStatus = commentStatus === 1 ? CommentStatus.Public : CommentStatus.Suspended;
+
+        parsedComments[foundComment.id] = foundComment;
+
+        localStorage.setItem('jokeComments', JSON.stringify(parsedComments))
+    }
+}
+
+
+
 
 export const deleteComment = (commentId: string) => {
     let currentComments:string | null = localStorage.getItem('jokeComments')

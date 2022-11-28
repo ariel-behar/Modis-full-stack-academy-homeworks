@@ -10,12 +10,20 @@ export const StyledCommentsSection = styled.section`
     margin-top: 20px;
 
     .section-corner-title {
-            position: absolute;
-            left: -30px;
-            top: -35px;
-            font-size: 50px;
-            font-weight: bold;
-            font-style: italic;
-            transform: rotate(-5deg);
+        position: absolute;
+        left: -30px;
+        top: -35px;
+        font-size: 50px;
+        font-weight: bold;
+        font-style: italic;
+        transform: rotate(-5deg);
+    }
+
+    .comments-radio-buttons {
+        text-align: center;
+
+        input[type="radio"] {
+            margin: 0 20px 0 5px;
         }
+    }
 `

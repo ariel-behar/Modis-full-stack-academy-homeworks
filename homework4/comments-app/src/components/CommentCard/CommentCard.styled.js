@@ -13,6 +13,12 @@ export const StyledCommentCardArticle = styled.article`
     main {
         display: flex;
         justify-content: space-between;
+
+        form {
+            input[type="radio"] {
+                margin: 0 20px 0 5px;
+            }
+        }
     }
 
     footer {
