@@ -3,7 +3,9 @@ import styled from 'styled-components'
 export const StyledJokesSection = styled.section`
     grid-area: jokes;
 
-    background-color: rgb(240, 248, 255);
+    background: rgb(140,200,252);
+    background: linear-gradient(133deg, rgba(140,200,252,1) 0%, rgba(240,248,255,1) 100%);
+    
     border: 1px solid ${({theme}) => theme.colors.blueBtn};
     margin-top: 20px;
 

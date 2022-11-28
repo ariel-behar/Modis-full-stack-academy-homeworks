@@ -34,7 +34,6 @@ export const edit = (commentId: string, commentTitle: string, commentContent: st
         foundComment.title = commentTitle;
         foundComment.content = commentContent;
         foundComment.modifiedAt = (new Date())
-
         parsedComments[foundComment.id] = foundComment;
 
         localStorage.setItem('jokeComments', JSON.stringify(parsedComments))

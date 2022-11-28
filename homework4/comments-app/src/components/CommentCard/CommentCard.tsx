@@ -22,7 +22,9 @@ function CommentCard({ comment, updateComments }: CommentCardProps) {
 
     useEffect(() => {
         setCheckedRadio(comment.commentStatus)
+        return () => {
 
+        }
     }, [])
 
     function editCommentHandler(toggle: boolean) {
@@ -52,7 +54,6 @@ function CommentCard({ comment, updateComments }: CommentCardProps) {
                     <p>{comment.content}</p>
                 </div>
                 <div>
-                    <p>Created at: <br />{comment.createdAt}</p>
                     <form>
                         <label htmlFor="radio-public">Public</label>
                         <input type="radio" name="status" id="radio-public" value="1" onChange={e => radioButtonHander(1)} checked={checkedRadio === 1 ? true : false} />
@@ -60,6 +61,14 @@ function CommentCard({ comment, updateComments }: CommentCardProps) {
                         <label htmlFor="radio-suspended">Suspended</label>
                         <input type="radio" name="status" id="radio-suspended" value="2" onChange={e => radioButtonHander(2)} checked={checkedRadio === 2 ? true : false} />
                     </form>
+
+                    {
+                        comment.modifiedAt
+                        ? <p>Modified at: <br />{comment.modifiedAt }</p>
+                        : ''
+                    }
+                    
+                   
                 </div>
             </main>
 

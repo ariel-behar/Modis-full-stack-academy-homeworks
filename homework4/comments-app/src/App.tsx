@@ -34,11 +34,26 @@ function App() {
 
 		if (typeof storedComments === 'string') {
 			if(storedComments !== JSON.stringify(comments)) {
-				setComments(JSON.parse(storedComments))
+				let parsedStoredComments = JSON.parse(storedComments)
+
+				let sortedComments = sortComments(parsedStoredComments)
+
+				setComments(sortedComments)
 			}
 		}
 	}
 
+	function sortComments(parsedStoredComments: object[]) {
+		let filteredStoredCommentsWithModifiedAt = parsedStoredComments.filter((comment: any) => comment.hasOwnProperty('modifiedAt'))
+
+		let filteredStoredCommentsWithoutModifiedAt = parsedStoredComments.filter((comment: any) => !comment.hasOwnProperty('modifiedAt'))
+		
+		filteredStoredCommentsWithModifiedAt.sort((a:any, b:any) => (new Date(b.modifiedAt) as any) - (new Date(a.modifiedAt) as any) );
+
+		let parsedFilteredStoredComments: object[] = filteredStoredCommentsWithModifiedAt.concat(filteredStoredCommentsWithoutModifiedAt)
+
+		return parsedFilteredStoredComments;
+	}
 
 	return (
 		<ThemeProvider theme={ theme }>
