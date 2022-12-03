@@ -1,3 +1,4 @@
+import { StyledForm } from "./styles/Form.styled"
 
 function Register() {
 
@@ -7,7 +8,7 @@ function Register() {
     }
 
     return (
-        <form onSubmit={onSubmitHandler}>
+        <StyledForm onSubmit={onSubmitHandler}>
             <label htmlFor="firstName">First Name:</label>
             <input type="text" name="firstName" id="firstName" />
 
@@ -37,7 +38,7 @@ function Register() {
             <input type="text" name="description" id="description" />
 
             <input type="submit" value="Register" />
-        </form>
+        </StyledForm>
     )
 }
 

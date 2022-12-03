@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../img/logo.png'
 import { StyledHeader } from './styles/Header.styled'
 
@@ -6,17 +7,18 @@ function Header() {
 	return (
 		<StyledHeader>
 			<div className='header-logo-div'>
-				<a href='#'>
+				<Link to='/'>
 					<img src={logo} alt='Logo' />
-				</a>
+				</Link>
 			</div>
 
 			<ul className='header-buttons-ul'>
+
 				<li>
-					<a href="#">Register</a>
+					<Link to="/login">Login</Link>
 				</li>
 				<li>
-					<a href="#">Login</a>
+					<Link to="/register">Register</Link>
 				</li>
 			</ul>
 
